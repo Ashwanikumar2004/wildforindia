@@ -6,17 +6,12 @@ Home | WildFIndia
 
 {% block content %}
 
-<section>
-    <h1>Welcome to WildFIndia</h1>
+{% include "includes/hero.html" %}
 
-    <p>
-        An AI-powered platform to explore India's wildlife,
-        identify species, discover national parks,
-        and contribute to wildlife conservation.
-    </p>
+{% include "includes/stats.html" %}
 
-    <button>Explore Wildlife</button>
+{% include "includes/featured_species.html" %}
 
-</section>
+{% include "includes/latest_sightings.html" %}
 
 {% endblock %}
