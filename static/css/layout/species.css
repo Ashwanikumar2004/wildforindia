@@ -1,0 +1,188 @@
+/* ===========================================================
+                    WildFIndia
+                    species.css
+=========================================================== */
+
+.featured-section {
+
+    padding: var(--space-section) 0;
+
+    background: linear-gradient(to bottom,
+            var(--background),
+            var(--background-light));
+
+}
+
+/* Heading */
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+.section-heading h2 {
+
+    margin-top: 20px;
+
+}
+
+.section-heading p {
+
+    margin-top: 15px;
+
+}
+
+/* Badge */
+
+.section-tag {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, .08);
+
+    color: var(--accent-color);
+
+    backdrop-filter: blur(10px);
+
+}
+
+/* Card */
+
+.species-card {
+
+    overflow: hidden;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(var(--glass-blur));
+
+    border: 1px solid var(--glass-border);
+
+    transition: var(--transition-normal);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+.species-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow: var(--shadow-xl);
+
+}
+
+/* Image */
+
+.species-card img {
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+
+    transition: var(--transition-slow);
+
+}
+
+.species-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+/* Content */
+
+.species-content {
+
+    padding: 25px;
+
+}
+
+.species-content h4 {
+
+    margin-top: 20px;
+
+}
+
+.species-content em {
+
+    color: var(--text-muted);
+
+}
+
+/* Status */
+
+.status {
+
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+}
+
+.endangered {
+
+    background: var(--endangered);
+
+    color: white;
+
+}
+
+.vulnerable {
+
+    background: var(--vulnerable);
+
+    color: white;
+
+}
+
+.least {
+
+    background: var(--least-concern);
+
+    color: white;
+
+}
+
+/* Button */
+
+.explore-btn {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: var(--accent-color);
+
+    font-weight: 600;
+
+    transition: var(--transition-normal);
+
+}
+
+.explore-btn:hover {
+
+    color: white;
+
+    transform: translateX(8px);
+
+}

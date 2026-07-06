@@ -1,0 +1,98 @@
+/* ===========================================================
+                    WildFIndia
+                    typography.css
+=========================================================== */
+
+body {
+
+    font-family: var(--body-font);
+
+}
+
+h1 {
+
+    font-size: var(--font-4xl);
+
+    color: var(--text-primary);
+
+    margin-bottom: var(--space-md);
+
+}
+
+h2 {
+
+    font-size: var(--font-3xl);
+
+    color: var(--text-primary);
+
+    margin-bottom: var(--space-md);
+
+}
+
+h3 {
+
+    font-size: var(--font-2xl);
+
+    color: var(--text-primary);
+
+}
+
+h4 {
+
+    font-size: var(--font-xl);
+
+}
+
+h5 {
+
+    font-size: var(--font-lg);
+
+}
+
+h6 {
+
+    font-size: var(--font-md);
+
+}
+
+p {
+
+    font-size: var(--font-md);
+
+    line-height: 1.8;
+
+    color: var(--text-secondary);
+
+}
+
+small {
+
+    font-size: var(--font-sm);
+
+    color: var(--text-muted);
+
+}
+
+strong {
+
+    font-weight: var(--fw-bold);
+
+}
+
+.text-primary {
+
+    color: var(--primary-color) !important;
+
+}
+
+.text-accent {
+
+    color: var(--accent-color) !important;
+
+}
+
+.text-muted {
+
+    color: var(--text-muted) !important;
+
+}

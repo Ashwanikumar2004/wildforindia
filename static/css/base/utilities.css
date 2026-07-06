@@ -1,0 +1,126 @@
+/* ===========================================================
+                    WildFIndia
+                    utilities.css
+=========================================================== */
+
+/* Containers */
+
+.section {
+
+    padding: var(--space-section) 0;
+
+}
+
+/* Glass Card */
+
+.glass {
+
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(var(--glass-blur));
+
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: var(--radius-lg);
+
+}
+
+/* Flex */
+
+.flex {
+
+    display: flex;
+
+}
+
+.flex-center {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+/* Grid */
+
+.grid {
+
+    display: grid;
+
+}
+
+/* Buttons */
+
+.btn-pill {
+
+    border-radius: var(--radius-pill);
+
+}
+
+/* Shadows */
+
+.shadow-sm {
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+.shadow-md {
+
+    box-shadow: var(--shadow-md);
+
+}
+
+.shadow-lg {
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/* Rounded */
+
+.rounded-lg {
+
+    border-radius: var(--radius-lg);
+
+}
+
+.rounded-xl {
+
+    border-radius: var(--radius-xl);
+
+}
+
+/* Spacing */
+
+.mt-section {
+
+    margin-top: var(--space-section);
+
+}
+
+.mb-section {
+
+    margin-bottom: var(--space-section);
+
+}
+
+/* Text Alignment */
+
+.text-center {
+
+    text-align: center;
+
+}
+
+/* Width */
+
+.w-100 {
+
+    width: 100%;
+
+}

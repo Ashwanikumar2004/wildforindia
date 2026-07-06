@@ -1,0 +1,58 @@
+/* ===========================================================
+                    WildFIndia
+                    stats.css
+=========================================================== */
+
+.stats-section {
+
+    padding: var(--space-section) 0;
+
+    background: var(--background-light);
+
+}
+
+/* Card */
+
+.stat-card {
+
+    padding: 40px 20px;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(var(--glass-blur));
+
+    border: 1px solid var(--glass-border);
+
+    transition: var(--transition-normal);
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/* Counter */
+
+.counter {
+
+    font-size: 3rem;
+
+    color: var(--accent-color);
+
+    font-weight: var(--fw-bold);
+
+}
+
+.stat-card p {
+
+    margin-top: 15px;
+
+    color: var(--text-secondary);
+
+}

@@ -1,0 +1,208 @@
+/* ===========================================================
+                    WildFIndia
+                    navbar.css
+=========================================================== */
+
+/* ==========================
+        GLASS NAVBAR
+========================== */
+
+.custom-navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: var(--z-navbar);
+
+    padding: 18px 0;
+
+    transition: all var(--transition-normal);
+
+    background: rgba(11, 29, 23, .65);
+
+    backdrop-filter: blur(var(--glass-blur));
+
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+/* Scroll Effect */
+
+.custom-navbar.scrolled {
+
+    background: rgba(8, 28, 21, .95);
+
+    padding: 14px 0;
+
+}
+
+/* Logo */
+
+.navbar-brand {
+
+    font-family: var(--heading-font);
+
+    font-size: 1.7rem;
+
+    font-weight: var(--fw-bold);
+
+    color: var(--accent-color) !important;
+
+    letter-spacing: 1px;
+
+    transition: var(--transition-normal);
+
+}
+
+.navbar-brand:hover {
+
+    color: white !important;
+
+    transform: scale(1.05);
+
+}
+
+/* Links */
+
+.navbar-nav {
+
+    gap: 8px;
+
+}
+
+.nav-link {
+
+    position: relative;
+
+    color: var(--text-primary) !important;
+
+    font-weight: var(--fw-medium);
+
+    padding: 10px 18px !important;
+
+    border-radius: var(--radius-pill);
+
+    transition: var(--transition-normal);
+
+}
+
+.nav-link:hover {
+
+    color: var(--accent-color) !important;
+
+    background: rgba(255, 255, 255, .08);
+
+}
+
+/* Active Link */
+
+.nav-link.active {
+
+    background: rgba(149, 213, 178, .12);
+
+    color: var(--accent-color) !important;
+
+}
+
+/* Underline Animation */
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 16px;
+
+    right: 16px;
+
+    bottom: 6px;
+
+    height: 2px;
+
+    background: var(--accent-color);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform var(--transition-normal);
+
+}
+
+.nav-link:hover::after,
+
+.nav-link.active::after {
+
+    transform: scaleX(1);
+
+}
+
+/* Buttons */
+
+.navbar .btn {
+
+    border-radius: var(--radius-pill);
+
+    padding: 10px 22px;
+
+    font-weight: var(--fw-medium);
+
+    transition: var(--transition-normal);
+
+}
+
+.navbar .btn-success {
+
+    background: var(--primary-color);
+
+    border: none;
+
+}
+
+.navbar .btn-success:hover {
+
+    background: var(--primary-light);
+
+    transform: translateY(-2px);
+
+}
+
+.navbar .btn-outline-light:hover {
+
+    color: var(--background);
+
+    transform: translateY(-2px);
+
+}
+
+/* Mobile */
+
+.navbar-toggler {
+
+    border: none;
+
+    box-shadow: none !important;
+
+}
+
+.navbar-toggler:focus {
+
+    box-shadow: none;
+
+}
+
+.navbar-collapse {
+
+    transition: all var(--transition-normal);
+
+}

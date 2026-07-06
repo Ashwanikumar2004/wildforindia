@@ -1,0 +1,178 @@
+/* ===========================================================
+                    WildFIndia
+                    reset.css
+=========================================================== */
+
+/* Remove Default Margins & Padding */
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Root */
+
+html {
+
+    scroll-behavior: smooth;
+
+    font-size: 16px;
+
+}
+
+/* Body */
+
+body {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    font-family: var(--body-font);
+
+    background: var(--background);
+
+    color: var(--text-primary);
+
+    line-height: 1.6;
+
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+/* Images */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+/* Lists */
+
+ul,
+ol {
+
+    list-style: none;
+
+}
+
+/* Links */
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+/* Buttons */
+
+button {
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    font: inherit;
+
+}
+
+/* Form Elements */
+
+input,
+textarea,
+select {
+
+    font: inherit;
+
+    outline: none;
+
+}
+
+/* Tables */
+
+table {
+
+    border-collapse: collapse;
+
+    border-spacing: 0;
+
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    font-weight: var(--fw-bold);
+
+    line-height: 1.2;
+
+}
+
+/* Paragraph */
+
+p {
+
+    color: var(--text-secondary);
+
+}
+
+/* Selection */
+
+::selection {
+
+    background: var(--primary-color);
+
+    color: white;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--background-dark);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary-color);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--primary-light);
+
+}
