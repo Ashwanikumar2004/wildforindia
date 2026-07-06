@@ -288,3 +288,61 @@ section {
     }
 
 }
+
+/* ===========================================
+            STATISTICS SECTION
+=========================================== */
+
+.stats-section {
+
+    padding: 100px 0;
+
+    background: #10281F;
+
+}
+
+.stat-card {
+
+    padding: 40px 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, .05);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    transition: .35s;
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-10px);
+
+    background: rgba(255, 255, 255, .08);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .35);
+
+}
+
+.stat-card h2 {
+
+    font-size: 3rem;
+
+    color: #95D5B2;
+
+    font-weight: 700;
+
+}
+
+.stat-card p {
+
+    margin-top: 10px;
+
+    color: #ddd;
+
+    font-size: 1.1rem;
+
+}
