@@ -4,11 +4,15 @@
 
         <div class="row text-center g-4">
 
+            <!-- Wildlife Species -->
+
             <div class="col-md-3">
 
                 <div class="stat-card">
 
-                    <h2 class="counter" data-target="1300">0</h2>
+                    <h2 class="counter">
+                        {{ species_count }}
+                    </h2>
 
                     <p>Wildlife Species</p>
 
@@ -16,37 +20,49 @@
 
             </div>
 
+            <!-- Categories -->
+
             <div class="col-md-3">
 
                 <div class="stat-card">
 
-                    <h2 class="counter" data-target="106">0</h2>
+                    <h2 class="counter">
+                        {{ category_count }}
+                    </h2>
+
+                    <p>Categories</p>
+
+                </div>
+
+            </div>
+
+            <!-- Habitats -->
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2 class="counter">
+                        {{ habitat_count }}
+                    </h2>
+
+                    <p>Habitats</p>
+
+                </div>
+
+            </div>
+
+            <!-- National Parks -->
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2 class="counter">
+                        {{ national_park_count|default:"0" }}
+                    </h2>
 
                     <p>National Parks</p>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <div class="stat-card">
-
-                    <h2 class="counter" data-target="2500">0</h2>
-
-                    <p>Verified Sightings</p>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <div class="stat-card">
-
-                    <h2 class="counter" data-target="54">0</h2>
-
-                    <p>Tiger Reserves</p>
 
                 </div>
 

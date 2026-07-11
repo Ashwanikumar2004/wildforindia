@@ -282,6 +282,20 @@ class Species(models.Model):
             self.slug = slugify(self.common_name)
 
         super().save(*args, **kwargs)
+    
+    @property
+    def primary_image(self):
+        """
+        Returns the primary image of the species.
+        If no image is marked as primary, returns the first image.
+        """
+
+        primary = self.images.filter(is_primary=True).first()
+
+        if primary:
+            return primary
+
+        return self.images.first()
 
     def __str__(self):
         return self.common_name

@@ -186,3 +186,125 @@
     transform: translateX(8px);
 
 }
+
+/* ===========================================
+   Species Detail Page
+=========================================== */
+
+.gallery-section {
+    background: linear-gradient(180deg, #f8fafc 0%, #eef5f1 100%);
+}
+
+.gallery-title {
+    font-weight: 700;
+    color: #1d3557;
+    margin-bottom: 40px;
+}
+
+.gallery-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+    transition: .35s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .15);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* ==========================================
+   Quick Facts
+========================================== */
+
+.facts-section {
+
+    background: linear-gradient(180deg, #f8fafc 0%, #eef8f2 100%);
+
+    position: relative;
+}
+
+.fact-card {
+
+    background: rgba(255, 255, 255, .72);
+
+    backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, .3);
+
+    border-radius: 22px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    height: 100%;
+
+    transition: .35s;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+
+}
+
+.fact-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .15);
+
+}
+
+.fact-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 32px;
+
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(46, 125, 50, .35);
+
+}
+
+.fact-card h5 {
+
+    font-weight: 700;
+
+    color: #1b4332;
+
+    margin-bottom: 12px;
+
+}
+
+.fact-card p {
+
+    color: #555;
+
+    font-size: 18px;
+
+    margin: 0;
+
+}

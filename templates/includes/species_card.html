@@ -1,0 +1,73 @@
+{% load static %}
+
+<div class="col-lg-4 col-md-6">
+
+    <div class="species-card">
+
+        {% if species.primary_image %}
+
+        <img src="{{ species.primary_image.image.url }}" alt="{{ species.common_name }}">
+
+        {% else %}
+
+        <img src="{% static 'images/species/default_species.jpg' %}" alt="{{ species.common_name }}">
+
+        {% endif %}
+
+        <div class="species-content">
+
+            <span class="status {{ species.conservation_status.code|lower }}">
+
+                {{ species.conservation_status.name }}
+
+            </span>
+
+            <h4>
+
+                {{ species.common_name }}
+
+            </h4>
+
+            <p>
+
+                <em>{{ species.scientific_name }}</em>
+
+            </p>
+
+            <p class="species-description">
+
+                {{ species.short_description|truncatewords:18 }}
+
+            </p>
+
+            <div class="species-meta">
+
+                <p>
+
+                    <strong>Category:</strong>
+
+                    {{ species.category.name }}
+
+                </p>
+
+                <p>
+
+                    <strong>Rarity:</strong>
+
+                    {{ species.rarity }}
+
+                </p>
+
+            </div>
+
+            <a href="{% url 'species_detail' species.slug %}" class="explore-btn">
+            
+                Explore More →
+            
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+All Wildlife Species | WildFIndia
+{% endblock %}
+
+{% block content %}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h1 class="fw-bold">
+
+                Indian Wildlife Species
+
+            </h1>
+
+            <p class="text-muted">
+
+                Browse and explore the incredible biodiversity of India.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            {% for species in page_obj %}
+
+            {% include "includes/species_card.html" %}
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <h3>No Species Found</h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <!-- Pagination -->
+
+        {% if page_obj.has_other_pages %}
+
+        <nav class="mt-5">
+
+            <ul class="pagination justify-content-center">
+
+                {% if page_obj.has_previous %}
+
+                <li class="page-item">
+
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+
+                        Previous
+
+                    </a>
+
+                </li>
+
+                {% endif %}
+
+                {% for page in page_obj.paginator.page_range %}
+
+                {% if page == page_obj.number %}
+
+                <li class="page-item active">
+
+                    <span class="page-link">
+
+                        {{ page }}
+
+                    </span>
+
+                </li>
+
+                {% else %}
+
+                <li class="page-item">
+
+                    <a class="page-link" href="?page={{ page }}">
+
+                        {{ page }}
+
+                    </a>
+
+                </li>
+
+                {% endif %}
+
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+
+                <li class="page-item">
+
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+
+                        Next
+
+                    </a>
+
+                </li>
+
+                {% endif %}
+
+            </ul>
+
+        </nav>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

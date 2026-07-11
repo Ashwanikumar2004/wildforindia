@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Search Results | WildFIndia
+{% endblock %}
+
+{% block content %}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <!-- Page Header -->
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                Wildlife Search
+
+            </span>
+
+            <h1 class="mt-3">
+
+                Search Results
+
+            </h1>
+
+            {% if query %}
+
+            <p class="text-muted">
+
+                Showing results for
+
+                <strong>"{{ query }}"</strong>
+
+            </p>
+
+            {% else %}
+
+            <p class="text-muted">
+
+                Browse all matching wildlife species.
+
+            </p>
+
+            {% endif %}
+
+            <p class="fw-semibold">
+
+                {{ species|length }} Species Found
+
+            </p>
+
+        </div>
+
+        <!-- Results -->
+
+        <div class="row g-4">
+
+            {% for species in species %}
+
+            {% include "includes/species_card.html" %}
+
+            {% empty %}
+
+            <div class="col-12">
+
+                <div class="text-center py-5">
+
+                    <img src="{% static 'images/empty.svg' %}" width="220" class="mb-4" alt="No Results">
+
+                    <h3>
+
+                        No Species Found
+
+                    </h3>
+
+                    <p class="text-muted">
+
+                        We couldn't find any wildlife matching your search.
+
+                    </p>
+
+                    <a href="{% url 'home' %}" class="btn btn-success mt-3">
+
+                        Back to Home
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

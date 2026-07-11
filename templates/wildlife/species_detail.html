@@ -1,0 +1,353 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+{{ species.common_name }} | WildFIndia
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+
+<section class="species-detail-hero py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                {% if species.primary_image %}
+
+                <img src="{{ species.primary_image.image.url }}" class="img-fluid rounded shadow"
+                    alt="{{ species.common_name }}">
+
+                {% else %}
+
+                <img src="{% static 'images/species/default_species.jpg' %}" class="img-fluid rounded shadow"
+                    alt="{{ species.common_name }}">
+
+                {% endif %}
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <span class="badge bg-success">
+
+                    {{ species.conservation_status.name }}
+
+                </span>
+
+                <h1 class="display-4 mt-3">
+
+                    {{ species.common_name }}
+
+                </h1>
+
+                <h4 class="text-muted">
+
+                    <em>{{ species.scientific_name }}</em>
+
+                </h4>
+
+                <p class="lead mt-4">
+
+                    {{ species.short_description }}
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Description -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2>
+
+            About
+
+        </h2>
+
+        <p>
+
+            {{ species.description }}
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Quick Facts -->
+
+<section class="facts-section py-5">
+
+    <div class="container">
+
+        <div class="section-heading text-center mb-5">
+
+            <span class="section-tag">
+
+                Quick Facts
+
+            </span>
+
+            <h2>
+
+                Know {{ species.common_name }}
+
+            </h2>
+
+            <p>
+
+                Essential information about this amazing species.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="fact-card">
+
+                    <div class="fact-icon">
+
+                        🐾
+
+                    </div>
+
+                    <h5>Category</h5>
+
+                    <p>{{ species.category.name }}</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="fact-card">
+
+                    <div class="fact-icon">
+
+                        🍃
+
+                    </div>
+
+                    <h5>Diet</h5>
+
+                    <p>{{ species.diet }}</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="fact-card">
+
+                    <div class="fact-icon">
+
+                        🎂
+
+                    </div>
+
+                    <h5>Lifespan</h5>
+
+                    <p>{{ species.lifespan }} Years</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="fact-card">
+
+                    <div class="fact-icon">
+
+                        ⚖️
+
+                    </div>
+
+                    <h5>Weight</h5>
+
+                    <p>
+
+                        {{ species.average_weight }}
+
+                        {{ species.weight_unit }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="fact-card">
+
+                    <div class="fact-icon">
+
+                        📏
+
+                    </div>
+
+                    <h5>Height</h5>
+
+                    <p>
+
+                        {{ species.average_height }}
+
+                        {{ species.height_unit }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="fact-card">
+
+                    <div class="fact-icon">
+
+                        ⚡
+
+                    </div>
+
+                    <h5>Top Speed</h5>
+
+                    <p>
+
+                        {{ species.top_speed }}
+
+                        {{ species.speed_unit }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Habitats -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2>
+
+            Habitats
+
+        </h2>
+
+        {% for habitat in species.habitats.all %}
+
+        <span class="badge bg-secondary me-2">
+
+            {{ habitat.name }}
+
+        </span>
+
+        {% empty %}
+
+        <p>No habitat information available.</p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- Gallery -->
+
+<section class="gallery-section py-5">
+
+    <div class="container">
+
+        <h2 class="gallery-title">
+            Image Gallery
+        </h2>
+
+        <div class="row g-4">
+
+            {% for image in species.images.all %}
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img src="{{ image.image.url }}" alt="{{ species.common_name }}">
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <p>No images available.</p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Related Species -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="mb-4">
+
+            Related Species
+
+        </h2>
+
+        <div class="row g-4">
+
+            {% for species in related_species %}
+
+            {% include "includes/species_card.html" %}
+
+            {% empty %}
+
+            <p>No related species found.</p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

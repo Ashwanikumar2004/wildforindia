@@ -22,95 +22,37 @@
 
         <div class="row g-4 mt-4">
 
-            <!-- Bengal Tiger -->
+            {% for species in featured_species %}
 
-            <div class="col-lg-4 col-md-6">
+            {% include "includes/species_card.html" %}
 
-                <div class="species-card">
+            {% empty %}
 
-                    <img src="{% static 'images/species/bengal_tiger.jpg' %}" alt="Bengal Tiger">
+            <div class="col-12 text-center">
 
-                    <div class="species-content">
+                <img src="{% static 'images/empty.svg' %}" width="180" class="mb-4" alt="No Species">
 
-                        <span class="status endangered">
-                            Endangered
-                        </span>
+                <h3>
+                    No Featured Species Available
+                </h3>
 
-                        <h4>Bengal Tiger</h4>
+                <p class="text-muted">
 
-                        <p><em>Panthera tigris tigris</em></p>
+                    Please add some species from the Django Admin panel and
+                    mark them as <strong>Featured</strong> and
+                    <strong>Verified</strong>.
 
-                        <a href="#" class="explore-btn">
-                            Explore More →
-                        </a>
-
-                    </div>
-
-                </div>
+                </p>
 
             </div>
 
-            <!-- Asian Elephant -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="species-card">
-
-                    <img src="{% static 'images/species/asian_elephant.jpg' %}" alt="Asian Elephant">
-
-                    <div class="species-content">
-
-                        <span class="status endangered">
-                            Endangered
-                        </span>
-
-                        <h4>Asian Elephant</h4>
-
-                        <p><em>Elephas maximus</em></p>
-
-                        <a href="#" class="explore-btn">
-                            Explore More →
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Indian Peafowl -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="species-card">
-
-                    <img src="{% static 'images/species/indian_peafowl.jpg' %}" alt="Indian Peafowl">
-
-                    <div class="species-content">
-
-                        <span class="status least">
-                            Least Concern
-                        </span>
-
-                        <h4>Indian Peafowl</h4>
-
-                        <p><em>Pavo cristatus</em></p>
-
-                        <a href="#" class="explore-btn">
-                            Explore More →
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
+            {% endfor %}
 
         </div>
 
         <div class="text-center mt-5">
 
-            <a href="#" class="btn btn-success btn-lg">
+            <a href="{% url 'species_list' %}" class="btn btn-success btn-lg">
 
                 View All Species
 
