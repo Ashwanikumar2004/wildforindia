@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 from django.utils.text import slugify
 
@@ -11,73 +13,79 @@ class State(models.Model):
         ("West", "West"),
         ("Central", "Central"),
         ("North-East", "North-East"),
-        ("Union Territory", "Union Territory"),
     ]
+
+    id = models.UUIDField(
+        primary_key=True,
+        default=uuid.uuid4,
+        editable=False,
+    )
 
     name = models.CharField(
         max_length=100,
-        unique=True
+        unique=True,
     )
 
     slug = models.SlugField(
         unique=True,
-        blank=True
+        blank=True,
+    )
+
+    code = models.CharField(
+        max_length=5,
+        unique=True,
     )
 
     capital = models.CharField(
         max_length=100,
-        blank=True
+        blank=True,
     )
 
     region = models.CharField(
         max_length=20,
-        choices=REGION_CHOICES
+        choices=REGION_CHOICES,
     )
 
-    latitude = models.DecimalField(
-        max_digits=9,
-        decimal_places=6,
+    area = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
         null=True,
-        blank=True
-    )
-
-    longitude = models.DecimalField(
-        max_digits=9,
-        decimal_places=6,
-        null=True,
-        blank=True
-    )
-
-    state_map = models.ImageField(
-        upload_to="states/maps/",
         blank=True,
-        null=True
+        help_text="Area in square kilometres",
     )
 
-    description = models.TextField(
-        blank=True
+    population = models.BigIntegerField(
+        null=True,
+        blank=True,
     )
 
     is_active = models.BooleanField(
-        default=True
+        default=True,
     )
 
     created_at = models.DateTimeField(
-        auto_now_add=True
+        auto_now_add=True,
     )
 
     updated_at = models.DateTimeField(
-        auto_now=True
+        auto_now=True,
     )
 
     class Meta:
+
         ordering = ["name"]
 
+        verbose_name = "State"
+
+        verbose_name_plural = "States"
+
     def save(self, *args, **kwargs):
+
         if not self.slug:
             self.slug = slugify(self.name)
 
         super().save(*args, **kwargs)
 
     def __str__(self):
+
         return self.name
