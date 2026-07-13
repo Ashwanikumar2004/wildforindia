@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import State, NationalPark, ParkImage, ParkFacility
+from .models import State, NationalPark, ParkImage, ParkFacility, ParkReview, ParkRoute
 
 
 @admin.register(State)
@@ -145,13 +145,69 @@ class ParkFacilityAdmin(admin.ModelAdmin):
 
     list_display = (
         "name",
+        "display_order",
+        "is_popular",
         "is_active",
     )
 
     list_filter = (
+        "is_popular",
         "is_active",
     )
 
     search_fields = (
         "name",
+    )
+
+    ordering = (
+        "display_order",
+        "name",
+    )
+
+@admin.register(ParkReview)
+class ParkReviewAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "park",
+        "reviewer_name",
+        "rating",
+        "visit_date",
+        "is_verified",
+    )
+
+    list_filter = (
+        "rating",
+        "is_verified",
+    )
+
+    search_fields = (
+        "park__name",
+        "reviewer_name",
+    )
+
+@admin.register(ParkRoute)
+class ParkRouteAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "park",
+        "starting_city",
+        "transport_mode",
+        "distance",
+        "estimated_time",
+        "is_best_route",
+    )
+
+    list_filter = (
+        "transport_mode",
+        "is_best_route",
+    )
+
+    search_fields = (
+        "park__name",
+        "starting_city",
+    )
+
+    ordering = (
+        "display_order",
+        "starting_city",
     )

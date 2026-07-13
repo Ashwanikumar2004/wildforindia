@@ -19,11 +19,19 @@ class ParkFacility(models.Model):
     icon = models.CharField(
         max_length=100,
         blank=True,
-        help_text="Bootstrap icon name (example: bi-car-front)",
+        help_text="Bootstrap icon class (example: bi-car-front-fill)",
     )
 
     description = models.TextField(
         blank=True,
+    )
+
+    display_order = models.PositiveIntegerField(
+        default=0,
+    )
+
+    is_popular = models.BooleanField(
+        default=False,
     )
 
     is_active = models.BooleanField(
@@ -34,9 +42,16 @@ class ParkFacility(models.Model):
         auto_now_add=True,
     )
 
+    updated_at = models.DateTimeField(
+        auto_now=True,
+    )
+
     class Meta:
 
-        ordering = ["name"]
+        ordering = [
+            "display_order",
+            "name",
+        ]
 
         verbose_name = "Park Facility"
 
