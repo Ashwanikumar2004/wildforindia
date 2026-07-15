@@ -1,0 +1,83 @@
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+
+                <div class="fact-card">
+
+                    <h5>Area</h5>
+
+                    <p>
+
+                        {{ park.area }} km²
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="fact-card">
+
+                    <h5>Established</h5>
+
+                    <p>
+
+                        {{ park.established_year }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="fact-card">
+
+                    <h5>Safari</h5>
+
+                    <p>
+
+                        {% if park.safari_available %}
+
+                        Available
+
+                        {% else %}
+
+                        Not Available
+
+                        {% endif %}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="fact-card">
+
+                    <h5>State</h5>
+
+                    <p>
+
+                        {{ park.state.name }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

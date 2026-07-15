@@ -7,8 +7,11 @@
 @import url("layout/hero.css");
 @import url("layout/search.css");
 @import url("layout/stats.css");
-@import url("layout/species.css");
 @import url("layout/footer.css");
+
+
+@import url("pages/species.css");
+@import url("pages/parks.css");
 
 @import url("animations.css");
 @import url("responsive.css");

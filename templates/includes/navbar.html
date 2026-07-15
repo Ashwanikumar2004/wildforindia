@@ -1,71 +1,123 @@
+{% with request.resolver_match.url_name as url_name %}
+
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm custom-navbar sticky-top">
+
     <div class="container">
 
         <!-- Logo -->
-        <a class="navbar-brand fw-bold" href="/">
+
+        <a class="navbar-brand fw-bold" href="{% url 'home' %}">
+
             🦁 WildFIndia
+
         </a>
 
         <!-- Mobile Toggle -->
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
 
             <span class="navbar-toggler-icon"></span>
 
         </button>
 
-        <!-- Navbar Links -->
+        <!-- Navbar -->
+
         <div class="collapse navbar-collapse" id="mainNavbar">
 
             <!-- Left Menu -->
+
             <ul class="navbar-nav mx-auto">
 
+                <!-- Home -->
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">
+
+                    <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">
+
                         Home
+
                     </a>
+
                 </li>
 
+                <!-- Explore -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+
+                    <a class="nav-link {% if url_name == 'species_list' or url_name == 'species_detail' %}active{% endif %}"
+                        href="{% url 'species_list' %}">
+
                         Explore
+
                     </a>
+
                 </li>
 
+                <!-- Parks -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+
+                    <a class="nav-link {% if url_name == 'parks_list' or url_name == 'park_detail' %}active{% endif %}"
+                        href="{% url 'parks_list' %}">
+
                         Parks
+
                     </a>
+
                 </li>
 
+                <!-- Interactive Map -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+
+                    <a class="nav-link {% if url_name == 'parks_map' %}active{% endif %}" href="#">
+
                         Interactive Map
+
                     </a>
+
                 </li>
 
+                <!-- AI -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+
+                    <a class="nav-link {% if url_name == 'ai_identifier' %}active{% endif %}" href="#">
+
                         AI Identifier
+
                     </a>
+
                 </li>
 
+                <!-- WildDex -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+
+                    <a class="nav-link {% if url_name == 'wilddex' %}active{% endif %}" href="#">
+
                         WildDex
+
                     </a>
+
                 </li>
 
             </ul>
 
             <!-- Right Menu -->
+
             <div class="d-flex gap-2">
 
                 <a href="#" class="btn btn-outline-light btn-sm">
+
                     Login
+
                 </a>
 
                 <a href="#" class="btn btn-success btn-sm">
+
                     Register
+
                 </a>
 
             </div>
@@ -73,4 +125,7 @@
         </div>
 
     </div>
+
 </nav>
+
+{% endwith %}

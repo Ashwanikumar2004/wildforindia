@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+{% block title %}
+National Parks | WildFIndia
+{% endblock %}
+
+{% block content %}
+
+<section class="park-section">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-tag">
+                Explore Nature
+            </span>
+
+            <h1>
+                National Parks of India
+            </h1>
+
+            <p>
+                Discover India's breathtaking national parks, wildlife, and conservation treasures.
+            </p>
+
+        </div>
+
+        <!-- Search & Filters -->
+
+        <form method="GET" class="mt-5">
+
+            <div class="park-card p-4">
+
+                <div class="row g-3">
+
+                    <!-- Search -->
+
+                    <div class="col-lg-3">
+
+                        <input type="text" name="q" class="form-control search-input" placeholder="Search Parks..."
+                            value="{{ request.GET.q }}">
+
+                    </div>
+
+                    <!-- State -->
+
+                    <div class="col-lg-2">
+
+                        <select name="state" class="form-select search-select">
+
+                            <option value="">
+
+                                All States
+
+                            </option>
+
+                            {% for state in states %}
+
+                            <option value="{{ state.id }}" {% if selected_state == state.id|stringformat:"s" %} selected
+                                {% endif %}>
+
+                                {{ state.name }}
+
+                            </option>
+
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                    <!-- Safari -->
+
+                    <div class="col-lg-2">
+
+                        <select name="safari" class="form-select search-select">
+
+                            <option value="">
+                                Safari
+                            </option>
+
+                            <option value="yes">
+                                Available
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Featured -->
+
+                    <div class="col-lg-2">
+
+                        <select name="featured" class="form-select search-select">
+
+                            <option value="">
+                                Featured
+                            </option>
+
+                            <option value="yes">
+                                Featured Parks
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Sort -->
+
+                    <div class="col-lg-2">
+
+                        <select name="sort" class="form-select search-select">
+
+                            <option value="">
+                                Sort By
+                            </option>
+
+                            <option value="name">
+                                Name
+                            </option>
+
+                            <option value="area">
+                                Area
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Button -->
+
+                    <div class="col-lg-1">
+
+                        <button type="submit" class="btn btn-success w-100 search-btn">
+
+                            Go
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- Park Cards -->
+
+        <div class="row g-4 mt-5">
+
+            {% for park in parks %}
+
+            {% include "includes/park_card.html" with park=park %}
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <img src="/static/images/empty.svg" width="180" class="mb-4" alt="No Parks">
+
+                <h3>
+
+                    No National Parks Found
+
+                </h3>
+
+                <p class="text-light">
+
+                    Try changing your search filters.
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <!-- Pagination -->
+
+        {% if parks.has_other_pages %}
+
+        <nav class="mt-5">
+
+            <ul class="pagination justify-content-center">
+
+                {% if parks.has_previous %}
+
+                <li class="page-item">
+
+                    <a class="page-link" href="?page={{ parks.previous_page_number }}">
+
+                        Previous
+
+                    </a>
+
+                </li>
+
+                {% endif %}
+
+                {% for page in parks.paginator.page_range %}
+
+                <li class="page-item {% if parks.number == page %}active{% endif %}">
+
+                    <a class="page-link" href="?page={{ page }}">
+
+                        {{ page }}
+
+                    </a>
+
+                </li>
+
+                {% endfor %}
+
+                {% if parks.has_next %}
+
+                <li class="page-item">
+
+                    <a class="page-link" href="?page={{ parks.next_page_number }}">
+
+                        Next
+
+                    </a>
+
+                </li>
+
+                {% endif %}
+
+            </ul>
+
+        </nav>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

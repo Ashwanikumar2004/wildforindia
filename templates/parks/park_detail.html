@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ park.name }} | WildFIndia
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/park_hero.html" %}
+
+{% include "includes/park_quick_facts.html" %}
+
+{% include "includes/park_about.html" %}
+
+{% include "includes/park_facilities.html" %}
+
+{% include "includes/park_species.html" %}
+
+{% include "includes/park_gallery.html" %}
+
+{% include "includes/park_reviews.html" %}
+
+{% include "includes/park_routes.html" %}
+
+{% include "includes/related_parks.html" %}
+
+{% endblock %}

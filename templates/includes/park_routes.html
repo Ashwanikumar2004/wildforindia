@@ -1,0 +1,111 @@
+<section class="park-section">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-tag">
+
+                Travel Guide
+
+            </span>
+
+            <h2>
+
+                How to Reach
+
+            </h2>
+
+            <p>
+
+                Choose the best travel route to the park.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            {% for route in park.routes.all %}
+
+            <div class="col-lg-6">
+
+                <div class="park-card">
+
+                    <div class="card-body">
+
+                        <h5>
+
+                            {{ route.starting_city }}
+
+                        </h5>
+
+                        <p>
+
+                            <strong>Transport:</strong>
+
+                            {{ route.transport_mode }}
+
+                        </p>
+
+                        <p>
+
+                            <strong>Distance:</strong>
+
+                            {{ route.distance }} km
+
+                        </p>
+
+                        <p>
+
+                            <strong>Travel Time:</strong>
+
+                            {{ route.estimated_time }}
+
+                        </p>
+
+                        {% if route.route_description %}
+
+                        <p>
+
+                            {{ route.route_description }}
+
+                        </p>
+
+                        {% endif %}
+
+                        {% if route.google_maps_link %}
+
+                        <a href="{{ route.google_maps_link }}" target="_blank" class="btn btn-success">
+
+                            View on Google Maps
+
+                        </a>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <p class="text-light">
+
+                    Route information is unavailable.
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>

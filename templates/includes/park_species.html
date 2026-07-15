@@ -1,0 +1,71 @@
+{% load static %}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="mb-4">
+
+            Wildlife Found
+
+        </h2>
+
+        <div class="row g-4">
+
+            {% for species in park.species.all %}
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    {% if species.primary_image %}
+
+                    <img src="{{ species.primary_image.image.url }}" class="card-img-top"
+                        alt="{{ species.common_name }}">
+
+                    {% else %}
+
+                    <img src="{% static 'images/species/default_species.jpg' %}" class="card-img-top"
+                        alt="{{ species.common_name }}">
+
+                    {% endif %}
+
+                    <div class="card-body">
+
+                        <h6>
+
+                            {{ species.common_name }}
+
+                        </h6>
+
+                        <small class="text-muted">
+
+                            {{ species.scientific_name }}
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12">
+
+                <p class="text-muted">
+
+                    No wildlife information available.
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>

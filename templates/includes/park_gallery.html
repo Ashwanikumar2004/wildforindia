@@ -1,0 +1,73 @@
+<section class="park-section">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-tag">
+                Gallery
+            </span>
+
+            <h2>
+                Park Image Gallery
+            </h2>
+
+            <p>
+                Explore beautiful photographs from the park.
+            </p>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            {% for image in park.images.all %}
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="park-card gallery-card">
+
+                    <img src="{{ image.image.url }}" alt="{{ image.caption }}">
+
+                    <div class="card-body">
+
+                        <h6>
+
+                            {{ image.caption }}
+
+                        </h6>
+
+                        {% if image.photographer %}
+
+                        <small>
+
+                            📷 {{ image.photographer }}
+
+                        </small>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <p class="text-light">
+
+                    No images available.
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>

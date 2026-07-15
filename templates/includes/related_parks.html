@@ -1,0 +1,45 @@
+<section class="park-section">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-tag">
+
+                Explore More
+
+            </span>
+
+            <h2>
+
+                Related National Parks
+
+            </h2>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            {% for park in related_parks %}
+
+            {% include "includes/park_card.html" with park=park %}
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <p class="text-light">
+
+                    No related parks found.
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>

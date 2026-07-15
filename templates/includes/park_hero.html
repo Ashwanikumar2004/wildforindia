@@ -1,0 +1,41 @@
+{% load static %}
+
+<section class="hero-section">
+
+    {% if park.hero_image %}
+
+    <img class="hero-bg" src="{{ park.hero_image.url }}" alt="{{ park.name }}">
+
+    {% elif park.images.first %}
+
+    <img class="hero-bg" src="{{ park.images.first.image.url }}" alt="{{ park.name }}">
+
+    {% endif %}
+
+    <div class="hero-overlay">
+
+        <div class="container">
+
+            <span class="section-tag">
+
+                National Park
+
+            </span>
+
+            <h1>
+
+                {{ park.name }}
+
+            </h1>
+
+            <p>
+
+                {{ park.state.name }}
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>

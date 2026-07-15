@@ -1,0 +1,85 @@
+{% load static %}
+
+<div class="col-lg-4 col-md-6">
+
+    <div class="species-card h-100">
+
+        {% if park.hero_image %}
+
+        <img src="{{ park.hero_image.url }}" alt="{{ park.name }}">
+
+        {% elif park.images.first %}
+
+        <img src="{{ park.images.first.image.url }}" alt="{{ park.name }}">
+
+        {% else %}
+
+        <img src="{% static 'images/default_park.jpg' %}" alt="{{ park.name }}">
+
+        {% endif %}
+
+        <div class="species-content">
+
+            {% if park.is_featured %}
+
+            <span class="status least">
+
+                Featured
+
+            </span>
+
+            {% endif %}
+
+            <h4>
+
+                {{ park.name }}
+
+            </h4>
+
+            <p>
+
+                <strong>State:</strong>
+
+                {{ park.state.name }}
+
+            </p>
+
+            <p>
+
+                {{ park.description|truncatewords:18 }}
+
+            </p>
+
+            <div class="species-meta">
+
+                <span>
+
+                    <strong>Area:</strong>
+
+                    {{ park.area }} km²
+
+                </span>
+
+                <br>
+
+                <span>
+
+                    <strong>Established:</strong>
+
+                    {{ park.established_year }}
+
+                </span>
+
+            </div>
+
+            <a href="{% url 'park_detail' park.slug %}" class="explore-btn">
+
+                Explore Park →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
