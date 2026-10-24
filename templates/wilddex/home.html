@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}WildDex | WildFIndia{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+            <div>
+                <span class="badge text-bg-success mb-2">Wildlife journal</span>
+                <h1 class="fw-bold mb-1">Your WildDex</h1>
+                <p class="text-muted mb-0">A sample collection showing how wildlife discoveries could be presented.</p>
+            </div>
+            <span class="badge rounded-pill text-bg-warning">Demo data</span>
+        </div>
+
+        <div class="alert alert-warning" role="status">
+            This is sample content for preview only. Discoveries and XP are not saved to your account yet.
+        </div>
+
+        <div class="row g-3 mb-5">
+            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Experience points</p><p class="h3 mb-0">{{ demo_xp }} XP</p></div></div></div>
+            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Explorer level</p><p class="h3 mb-0">{{ demo_level }}</p></div></div></div>
+            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Discoveries</p><p class="h3 mb-0">{{ demo_discoveries }}</p></div></div></div>
+            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Next milestone</p><p class="h3 mb-0">1 species away</p></div></div></div>
+        </div>
+
+        <h2 class="h3 fw-bold mb-3">Species collection</h2>
+        <div class="row g-4">
+            {% for item in demo_collection %}
+            <div class="col-sm-6 col-lg-3">
+                <article class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="display-3 mb-2" aria-hidden="true">{% if item.discovered %}{{ item.icon }}{% else %}❔{% endif %}</div>
+                        {% if item.discovered %}
+                            <h3 class="h5">{{ item.name }}</h3>
+                            <p class="small text-muted fst-italic mb-2">{{ item.scientific_name }}</p>
+                            <span class="badge text-bg-success">Discovered</span>
+                            <span class="badge text-bg-light">{{ item.category }}</span>
+                            <p class="small mt-3 mb-0">Conservation status: {{ item.status }}</p>
+                        {% else %}
+                            <h3 class="h5">Undiscovered species</h3>
+                            <p class="text-muted small mb-0">Identify another species to add it to your journal.</p>
+                        {% endif %}
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

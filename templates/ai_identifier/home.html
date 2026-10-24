@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}AI Wildlife Identifier | WildFIndia{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container" style="max-width: 900px;">
+        <div class="text-center mb-5">
+            <span class="badge text-bg-success mb-3">Coming next: model connection</span>
+            <h1 class="fw-bold">AI Wildlife Identifier</h1>
+            <p class="lead text-muted">Upload a wildlife photo to discover which Indian species it may show.</p>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+                <div class="alert alert-info" role="status">
+                    This page is ready for the upload feature. The AI model is not connected yet, so it cannot identify an image at this stage.
+                </div>
+                <form>
+                    <label for="wildlife-photo" class="form-label fw-semibold">Choose a wildlife photo</label>
+                    <input id="wildlife-photo" class="form-control" type="file" accept="image/jpeg,image/png" disabled>
+                    <div class="form-text">For the first version, we plan to support JPG and PNG photos.</div>
+                    <button class="btn btn-success mt-4" type="button" disabled>Identify species (coming soon)</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row g-3 mt-4">
+            <div class="col-md-4"><div class="card h-100 border-0 bg-light"><div class="card-body"><h2 class="h6">1. Upload</h2><p class="mb-0 text-muted">Choose a clear animal photo.</p></div></div></div>
+            <div class="col-md-4"><div class="card h-100 border-0 bg-light"><div class="card-body"><h2 class="h6">2. Identify</h2><p class="mb-0 text-muted">The model will suggest likely species and confidence scores.</p></div></div></div>
+            <div class="col-md-4"><div class="card h-100 border-0 bg-light"><div class="card-body"><h2 class="h6">3. Learn</h2><p class="mb-0 text-muted">See trusted details from the species guide.</p></div></div></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

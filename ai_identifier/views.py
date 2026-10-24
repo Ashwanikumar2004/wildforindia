@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def identifier_home(request):
+    return render(request, "ai_identifier/home.html")   

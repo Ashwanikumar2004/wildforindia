@@ -82,7 +82,7 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link {% if url_name == 'ai_identifier' %}active{% endif %}" href="#">
+                    <a class="nav-link {% if url_name == 'ai_identifier' %}active{% endif %}" href="{% url 'ai_identifier' %}">
 
                         AI Identifier
 
@@ -94,7 +94,7 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link {% if url_name == 'wilddex' %}active{% endif %}" href="#">
+                    <a class="nav-link {% if url_name == 'wilddex' %}active{% endif %}" href="{% url 'wilddex' %}">
 
                         WildDex
 
@@ -106,20 +106,17 @@
 
             <!-- Right Menu -->
 
-            <div class="d-flex gap-2">
-
-                <a href="#" class="btn btn-outline-light btn-sm">
-
-                    Login
-
-                </a>
-
-                <a href="#" class="btn btn-success btn-sm">
-
-                    Register
-
-                </a>
-
+            <div class="d-flex align-items-center gap-2">
+                {% if user.is_authenticated %}
+                    <span class="text-white small">Hi, {{ user.username }}</span>
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-light btn-sm">Log out</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'login' %}" class="btn btn-outline-light btn-sm">Login</a>
+                    <a href="{% url 'register' %}" class="btn btn-success btn-sm">Register</a>
+                {% endif %}
             </div>
 
         </div>
