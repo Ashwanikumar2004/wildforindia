@@ -1,176 +1,69 @@
-{% load static %}
-
 <section class="search-section">
-
     <div class="container">
-
         <div class="search-container">
-
-            <span class="section-tag">
-                Wildlife Explorer
-            </span>
-
-            <h2 class="mt-4">
-                Discover India's Wildlife
-            </h2>
-
-            <p class="mt-3">
-                Search thousands of wildlife records using intelligent filters.
-            </p>
+            <span class="section-tag">Wildlife Explorer</span>
+            <h2 class="mt-4">Discover India's Wildlife</h2>
+            <p class="mt-3">Search the verified species currently in the WildFIndia catalogue.</p>
 
             <form action="{% url 'search_species' %}" method="GET">
-
                 <div class="search-card mt-5">
-
                     <div class="row g-3">
-
-                        <!-- Search -->
-
                         <div class="col-lg-4">
-
-                            <input type="text" name="q" class="form-control search-input"
-                                placeholder="Search Species..." value="{{ query }}">
-
+                            <input type="search" name="q" class="form-control search-input"
+                                placeholder="Species, scientific name, or habitat..."
+                                value="{{ query|default:'' }}" aria-label="Search wildlife species">
                         </div>
-
-                        <!-- State -->
-
                         <div class="col-lg-2">
-
-                            <select name="state" class="form-select search-select">
-
-                                <option value="">All States</option>
-
-                                <option value="Uttarakhand">Uttarakhand</option>
-
-                                <option value="Madhya Pradesh">Madhya Pradesh</option>
-
-                                <option value="Rajasthan">Rajasthan</option>
-
-                                <option value="Assam">Assam</option>
-
+                            <select name="state" class="form-select search-select" aria-label="Filter by recorded state">
+                                <option value="">All recorded states</option>
+                                {% for state in states %}
+                                <option value="{{ state.slug }}" {% if selected_state == state.slug %}selected{% endif %}>{{ state.name }}</option>
+                                {% empty %}
+                                <option disabled>No state records yet</option>
+                                {% endfor %}
                             </select>
-
                         </div>
-
-                        <!-- Category -->
-
                         <div class="col-lg-2">
-
-                            <select name="category" class="form-select search-select">
-
-                                <option value="">All Categories</option>
-
+                            <select name="category" class="form-select search-select" aria-label="Filter by category">
+                                <option value="">All categories</option>
                                 {% for category in categories %}
-
-                                <option value="{{ category.id }}">
-
-                                    {{ category.name }}
-
-                                </option>
-
+                                <option value="{{ category.slug }}" {% if selected_category == category.slug %}selected{% endif %}>{{ category.name }}</option>
                                 {% empty %}
-
-                                <option disabled>No Categories Available</option>
-
+                                <option disabled>No categories available</option>
                                 {% endfor %}
-
                             </select>
-
                         </div>
-
-                        <!-- Habitat -->
-
                         <div class="col-lg-2">
-
-                            <select name="habitat" class="form-select search-select">
-
-                                <option value="">All Habitats</option>
-
+                            <select name="habitat" class="form-select search-select" aria-label="Filter by habitat">
+                                <option value="">All habitats</option>
                                 {% for habitat in habitats %}
-
-                                <option value="{{ habitat.id }}">
-
-                                    {{ habitat.name }}
-
-                                </option>
-
+                                <option value="{{ habitat.slug }}" {% if selected_habitat == habitat.slug %}selected{% endif %}>{{ habitat.name }}</option>
                                 {% empty %}
-
-                                <option disabled>No Habitats Available</option>
-
+                                <option disabled>No habitats available</option>
                                 {% endfor %}
-
                             </select>
-
                         </div>
-
-                        <!-- Search Button -->
-
                         <div class="col-lg-2 d-grid">
-
-                            <button type="submit" class="btn btn-success search-btn">
-
-                                Search
-
-                            </button>
-
+                            <button type="submit" class="btn btn-success search-btn">Search</button>
                         </div>
-
                     </div>
-
                 </div>
-
             </form>
 
-            <!-- Popular Searches -->
+            <p class="search-data-note mt-3">
+                State matches use recorded ranges. A missing match does not prove a species is absent from that state.
+            </p>
 
             <div class="popular-tags mt-5">
-
-                <span class="tag-title">
-
-                    Popular Searches
-
-                </span>
-
-                <div class="mt-3 d-flex flex-wrap gap-2">
-
-                    <a href="{% url 'search_species' %}?q=Tiger" class="search-chip">
-
-                        🐅 Tiger
-
-                    </a>
-
-                    <a href="{% url 'search_species' %}?q=Elephant" class="search-chip">
-
-                        🐘 Elephant
-
-                    </a>
-
-                    <a href="{% url 'search_species' %}?q=Peacock" class="search-chip">
-
-                        🦚 Peacock
-
-                    </a>
-
-                    <a href="{% url 'search_species' %}?q=Gharial" class="search-chip">
-
-                        🐊 Gharial
-
-                    </a>
-
-                    <a href="{% url 'search_species' %}?q=Hornbill" class="search-chip">
-
-                        🦅 Hornbill
-
-                    </a>
-
+                <span class="tag-title">Popular searches</span>
+                <div class="mt-3 d-flex flex-wrap justify-content-center gap-2">
+                    <a href="{% url 'search_species' %}?q=Tiger" class="search-chip">Tiger</a>
+                    <a href="{% url 'search_species' %}?q=Elephant" class="search-chip">Elephant</a>
+                    <a href="{% url 'search_species' %}?q=Peafowl" class="search-chip">Peafowl</a>
+                    <a href="{% url 'search_species' %}?q=Gharial" class="search-chip">Gharial</a>
+                    <a href="{% url 'search_species' %}?q=Hornbill" class="search-chip">Hornbill</a>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>

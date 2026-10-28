@@ -1,0 +1,3 @@
+{% load catalogue_tags %}
+{% catalogue_image species as image_url %}
+<img src="{{ image_url }}" alt="{{ species.common_name }}" class="{{ image_class|default:'img-fluid' }}" loading="lazy" decoding="async">

@@ -9,7 +9,7 @@
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-    AOS.init({
+    if (window.AOS) AOS.init({
         duration: 1000,
         once: true,
         offset: 120,
@@ -24,4 +24,3 @@
 <script src="{% static 'js/counter.js' %}"></script>
 <script src="{% static 'js/search.js' %}"></script>
 <script src="{% static 'js/animations.js' %}"></script>
-<script src="{% static 'js/three-init.js' %}"></script>

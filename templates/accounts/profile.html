@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}My account | WildFIndia{% endblock %}
+{% block content %}
+<section class="py-5 account-page"><div class="container" style="max-width:760px">
+<h1>My account</h1><p>Signed in as <strong>{{ user.username }}</strong>. Member since {{ user.date_joined|date:"F Y" }}.</p>
+<div class="content-panel"><h2 class="h4">Profile details</h2>
+<form method="post">{% csrf_token %}{{ form.non_field_errors }}{% for field in form %}<div class="mb-3"><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{{ field.errors }}</div>{% endfor %}<button class="btn btn-success">Save details</button></form>
+</div>
+<div class="d-flex gap-3 flex-wrap mt-4"><a href="{% url 'password_change' %}" class="btn btn-outline-light">Change password</a><a href="{% url 'wilddex' %}" class="btn btn-outline-light">My WildDex</a><a href="{% url 'identification_history' %}" class="btn btn-outline-light">My photo history</a></div>
+</div></section>
+{% endblock %}

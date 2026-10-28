@@ -36,7 +36,8 @@ class ConservationStatus(models.Model):
     icon = models.ImageField(
         upload_to="status/",
         blank=True,
-        null=True
+        null=True,
+        max_length=500,
     )
 
     description = models.TextField(

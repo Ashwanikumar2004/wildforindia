@@ -34,7 +34,8 @@ class SpeciesSound(models.Model):
     )
 
     sound = models.FileField(
-        upload_to="species/sounds/"
+        upload_to="species/sounds/",
+        max_length=500,
     )
 
     sound_type = models.CharField(

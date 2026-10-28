@@ -45,6 +45,16 @@
 
 }
 
+.search-container .search-data-note {
+
+    margin-top: 14px;
+
+    color: var(--text-secondary);
+
+    font-size: .9rem;
+
+}
+
 /* Search Card */
 
 .search-card {

@@ -1,94 +1,18 @@
-<section class="park-section">
-
-    <div class="container">
-
-        <div class="section-heading text-center">
-
-            <span class="section-tag">
-
-                Visitor Experiences
-
-            </span>
-
-            <h2>
-
-                Visitor Reviews
-
-            </h2>
-
-            <p>
-
-                Read what visitors say about this national park.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4 mt-4">
-
-            {% for review in park.reviews.all %}
-
-            <div class="col-lg-6">
-
-                <div class="park-card">
-
-                    <div class="card-body">
-
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-
-                            <h5>
-
-                                {{ review.reviewer_name }}
-
-                            </h5>
-
-                            <span class="review-rating">
-
-                                {% for i in "12345" %}
-
-                                {% if forloop.counter <= review.rating %} ⭐ {% else %} ☆ {% endif %} {% endfor %}
-                                    </span>
-
-                        </div>
-
-                        <p>
-
-                            {{ review.review }}
-
-                        </p>
-
-                        <small>
-
-                            {% if review.visit_date %}
-
-                            Visited on {{ review.visit_date }}
-
-                            {% endif %}
-
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            {% empty %}
-
-            <div class="col-12 text-center">
-
-                <p class="text-light">
-
-                    No reviews available.
-
-                </p>
-
-            </div>
-
-            {% endfor %}
-
-        </div>
-
+<section class="park-section" id="reviews"><div class="container">
+    <h2 class="h3 mb-4">Visitor experiences</h2><div class="row g-4">
+    {% for review in park.published_reviews %}<div class="col-lg-6"><article class="content-panel h-100">
+        <div class="d-flex justify-content-between"><h3 class="h5">{{ review.reviewer_name }}</h3><span aria-label="{{ review.rating }} out of 5 stars">{{ review.rating }}/5 &#9733;</span></div>
+        {{ review.review|linebreaks }}{% if review.visit_date %}<p class="small">Visited {{ review.visit_date|date:"F Y" }}</p>{% endif %}
+    </article></div>{% empty %}<div class="col-12"><p>No published reviews yet. Share your experience after a visit.</p></div>{% endfor %}
     </div>
-
-</section>
+    <div class="content-panel mt-4 review-form">
+    {% if user.is_authenticated %}
+        <h3 class="h4">{% if own_review %}Update your review{% else %}Write a review{% endif %}</h3>
+        {% if own_review and not own_review.is_verified %}<p>Your review is awaiting moderation. Only you and the site moderators can see it until it is published.</p>{% endif %}
+        <form method="post" action="{% url 'park_detail' park.slug %}#reviews">{% csrf_token %}{{ review_form.non_field_errors }}
+        {% for field in review_form %}<div class="mb-3"><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{{ field.errors }}</div>{% endfor %}
+        <p class="small">Share your own visit experience. Please omit phone numbers, personal contact details, and precise locations of sensitive wildlife.</p>
+        <button type="submit" class="btn btn-success">Submit for review</button></form>
+    {% else %}<h3 class="h4">Have you visited?</h3><p>Sign in to share your experience.</p><a href="{% url 'login' %}?next={{ request.path|urlencode }}" class="btn btn-success">Log in to write a review</a>{% endif %}
+    </div>
+</div></section>

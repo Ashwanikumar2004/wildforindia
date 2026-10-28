@@ -21,6 +21,7 @@ class ParkImage(models.Model):
 
     image = models.ImageField(
         upload_to="parks/images/",
+        max_length=500,
     )
 
     caption = models.CharField(

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About &amp; credits | WildFIndia{% endblock %}
+{% block content %}
+<section class="py-5"><div class="container">
+<h1>About WildFIndia</h1><p class="lead">A student project for discovering India's wildlife and building a personal nature journal.</p>
+<div class="row g-4 mt-2"><div class="col-md-6"><div class="content-panel h-100"><h2 class="h4">Explore, identify, collect</h2><p>Browse {{ species_count }} researched species profiles and {{ park_count }} protected-area directory entries. Upload a wildlife photo, check the model's suggestions, and confirm a matching species to add it to your private WildDex.</p><p>AI results are suggestions. WildDex records your confirmation; it is not a scientific verification of a sighting.</p></div></div>
+<div class="col-md-6"><div class="content-panel h-100"><h2 class="h4">Your data</h2><p>Your journal, observations, and identification history belong to your signed-in account. Journal notes are private. Submitted park reviews become public only after moderation.</p><p>You can export your journal, remove a discovery, and delete an identification photo from your history. Deleting a photo does not remove an already confirmed WildDex species.</p></div></div></div>
+<div class="content-panel mt-4"><h2 class="h4">Sources and coverage</h2><p>The protected-area directory uses the source list bundled with this project. It is a dated catalogue, not a live official register. Park introductions link to their source articles. State ranges are representative and incomplete. Check the local Forest Department before planning a visit.</p><p>The map uses approximate display points. A park only lists species explicitly linked in our catalogue. Photographs and introductions are cached locally so catalogue pages do not wait for another website.</p><p>Animal and park illustrations use <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener noreferrer">Twemoji</a> graphics under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Map boundaries are credited on the map page.</p></div>
+<h2 class="h3 mt-5">Photograph credits</h2><p>{{ photo_count }} attributed photographs. Images may be resized or cropped for display. The source page identifies the photographer and original image.</p>
+<div class="row g-4">{% for item in page_obj %}<div class="col-md-6 col-lg-4"><article class="content-panel h-100"><img class="catalogue-photo" src="{% static item.path %}" alt="{{ item.name }}" loading="lazy"><h3 class="h6 mt-3">{{ item.name }}</h3>{% include "includes/photo_credit.html" with media=item %}</article></div>{% endfor %}</div>
+{% include "includes/pagination.html" %}
+</div></section>
+{% endblock %}

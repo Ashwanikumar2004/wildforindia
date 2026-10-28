@@ -10,22 +10,47 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+
+import dj_database_url
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Load local development settings from .env. Production values should be set
+# through the hosting provider's environment variable settings.
+load_dotenv(BASE_DIR / ".env")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&vyl-l7k^pw(pp=p+c7lo!e-e5!#mw2tmqdwoy4x@1dj_fd2ff'
+DEBUG = os.environ.get("DJANGO_DEBUG", "False").lower() in {"true", "1", "yes"}
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+if not SECRET_KEY:
+    if not DEBUG:
+        raise RuntimeError("Set DJANGO_SECRET_KEY in the production environment.")
+    SECRET_KEY = "local-only-development-key-change-before-deployment"
 
-ALLOWED_HOSTS = []
+default_hosts = "localhost,127.0.0.1" if DEBUG else ""
+configured_hosts = os.environ.get("DJANGO_ALLOWED_HOSTS", default_hosts).split(",")
+if os.environ.get("VERCEL_URL"):
+    configured_hosts.append(os.environ["VERCEL_URL"])
+ALLOWED_HOSTS = [
+    origin.strip()
+    for origin in configured_hosts
+    if origin.strip()
+]
+if not DEBUG and not ALLOWED_HOSTS:
+    raise RuntimeError("Set DJANGO_ALLOWED_HOSTS (or VERCEL_URL) in production.")
+
+csrf_origins = os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS", "").split(",")
+if os.environ.get("VERCEL_URL"):
+    csrf_origins.append(f"https://{os.environ['VERCEL_URL']}")
+CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in csrf_origins if origin.strip()]
 
 
 # Application definition
@@ -80,12 +105,25 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+DATABASE_URL = os.environ.get("DATABASE_URL")
+if DATABASE_URL:
+    DATABASES = {
+        "default": dj_database_url.parse(
+            DATABASE_URL,
+            conn_max_age=0,
+            conn_health_checks=True,
+        )
     }
-}
+else:
+    if not DEBUG:
+        raise RuntimeError("Set DATABASE_URL to a PostgreSQL URL in production.")
+    # SQLite remains convenient for local development.
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 
 # Password validation
@@ -122,13 +160,52 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+if not DEBUG:
+    required_blob_tokens = (
+        "BLOB_PUBLIC_READ_WRITE_TOKEN",
+        "BLOB_PRIVATE_READ_WRITE_TOKEN",
+    )
+    missing_blob_tokens = [name for name in required_blob_tokens if not os.environ.get(name)]
+    if missing_blob_tokens:
+        raise RuntimeError(
+            "Set separate public and private Vercel Blob tokens in production: "
+            + ", ".join(missing_blob_tokens)
+        )
+
+    from config.storage import VercelBlobStorage
+
+    STORAGES = {
+        "default": {
+            "BACKEND": "config.storage.VercelBlobStorage",
+            "OPTIONS": {"access": "public"},
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
+else:
+    STORAGES = {
+        "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 31_536_000
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 

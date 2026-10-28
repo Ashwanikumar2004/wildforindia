@@ -1,0 +1,35 @@
+.content-panel { padding: clamp(20px, 3vw, 32px); border: 1px solid var(--glass-border); background: var(--surface); border-radius: var(--radius-md); }
+.content-panel p:last-child { margin-bottom: 0; }
+.journal-page .card, .account-page .card { color: #172b22; }
+.journal-page .card :is(h1,h2,h3,h4,h5,p), .account-page .card :is(h1,h2,h3,h4,h5,p) { color: #172b22; }
+.journal-page .card .text-muted, .account-page .card .text-muted { color: #53665c !important; }
+.journal-photo { width: 100%; max-height: 520px; object-fit: contain; background: #10281f; }
+.journal-page .card img { width: 100%; height: 190px; object-fit: cover; }
+.content-panel :is(input:not([type=checkbox]), textarea, select), .account-page input { width: 100%; border: 1px solid #b6c6bc; border-radius: 8px; padding: 10px 12px; background: #fff; color: #172b22; }
+.errorlist { color: #ffb6ac; padding-left: 20px; }
+.account-page .card .errorlist { color: #9e1c1c; }
+.catalogue-pagination { display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.catalogue-pagination :is(a,span) { min-width: 42px; padding: 10px 15px; border-radius: 12px; border: 1px solid var(--glass-border); color: #d5ebdc; text-align: center; }
+.catalogue-pagination a:hover, .catalogue-pagination .is-current { background: var(--primary-color); color: white; }
+.catalogue-photo { width: 100%; height: 280px; object-fit: cover; border-radius: 16px; }
+.photo-credit { font-size: .8rem; margin-top: 8px; line-height: 1.6; overflow-wrap: anywhere; }
+.photo-credit a, .content-panel a:not(.btn), .site-footer a, .source-link { color: #b6e8cb; text-decoration: underline; text-underline-offset: 3px; }
+.site-footer { background: #06160f; border-top: 1px solid var(--glass-border); }
+.site-footer li { margin-top: 10px; }
+.skip-link { position: absolute; top: -100px; left: 20px; z-index: 2000; background: #fff; color: #10281f; padding: 12px; }
+.skip-link:focus { top: 10px; }
+.species-profile .profile-hero-photo { width: 100%; max-height: 450px; object-fit: cover; border-radius: 22px; }
+.species-profile .fact-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 16px; }
+.species-profile .fact-list > div { padding: 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--glass-border); }
+.species-profile dt { color: var(--accent-color); font-size: .85rem; margin-bottom: 8px; }
+.species-profile dd { margin: 0; color: #fff; }
+.species-card { height: 100%; }
+.species-card-image { object-fit: cover; }
+.hero-image { max-height: 540px; object-fit: cover; }
+.park-hero { padding-top: 0; min-height: 65vh; }
+.park-hero .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.park-hero .hero-overlay { position: relative; width: 100%; min-height: 65vh; display: flex; align-items: center; padding: 70px 0; background: linear-gradient(90deg, rgba(5,20,14,.9), rgba(5,20,14,.55)); }
+.park-hero h1 { max-width: 1000px; font-size: clamp(2.2rem, 5vw, 4rem); }
+.review-form label { display: block; }
+@media (max-width: 767px) { .species-profile h1 { font-size: 2.25rem; } .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; } .hero-buttons .ms-3 { margin-left: 0 !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto !important; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

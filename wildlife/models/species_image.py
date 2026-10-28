@@ -20,7 +20,8 @@ class SpeciesImage(models.Model):
     )
 
     image = models.ImageField(
-        upload_to="species/images/"
+        upload_to="species/images/",
+        max_length=500,
     )
 
     caption = models.CharField(

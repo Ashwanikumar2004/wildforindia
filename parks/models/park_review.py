@@ -1,11 +1,13 @@
 import uuid
 
 from django.db import models
+from django.conf import settings
 
 from .national_park import NationalPark
 
 
 class ParkReview(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL, related_name="park_reviews")
 
     RATING_CHOICES = [
         (1, "1 Star"),
@@ -51,6 +53,7 @@ class ParkReview(models.Model):
     )
 
     class Meta:
+        constraints = [models.UniqueConstraint(fields=["park", "user"], name="unique_park_review_per_user")]
 
         ordering = ["-created_at"]
 

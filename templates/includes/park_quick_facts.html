@@ -12,7 +12,7 @@
 
                     <p>
 
-                        {{ park.area }} km²
+                        {% if park.area %}{{ park.area }} km²{% else %}Not listed{% endif %}
 
                     </p>
 
@@ -28,7 +28,7 @@
 
                     <p>
 
-                        {{ park.established_year }}
+                        {% if park.established_year %}{{ park.established_year }}{% else %}Not listed{% endif %}
 
                     </p>
 
@@ -46,11 +46,15 @@
 
                         {% if park.safari_available %}
 
-                        Available
+                        Offered; check availability
+
+                        {% elif park.safari_available == False %}
+
+                        Unavailable
 
                         {% else %}
 
-                        Not Available
+                        Not listed
 
                         {% endif %}
 

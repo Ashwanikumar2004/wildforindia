@@ -11,6 +11,11 @@ from .park_facility import ParkFacility
 
 class NationalPark(models.Model):
 
+    AREA_TYPE_CHOICES = [
+        ("national_park", "National Park"),
+        ("wildlife_sanctuary", "Wildlife Sanctuary"),
+    ]
+
     id = models.UUIDField(
         primary_key=True,
         default=uuid.uuid4,
@@ -23,10 +28,18 @@ class NationalPark(models.Model):
 
     name = models.CharField(
         max_length=200,
-        unique=True,
+    )
+
+    protected_area_type = models.CharField(
+        max_length=24,
+        choices=AREA_TYPE_CHOICES,
+        default="national_park",
+        db_index=True,
+        help_text="Choose whether this protected area is a national park or wildlife sanctuary.",
     )
 
     slug = models.SlugField(
+        max_length=250,
         unique=True,
         blank=True,
     )
@@ -47,6 +60,8 @@ class NationalPark(models.Model):
     area = models.DecimalField(
         max_digits=10,
         decimal_places=2,
+        blank=True,
+        null=True,
         help_text="Area in square kilometres",
     )
 
@@ -90,7 +105,9 @@ class NationalPark(models.Model):
     )
 
     safari_available = models.BooleanField(
-        default=False,
+        blank=True,
+        null=True,
+        default=None,
     )
 
     official_website = models.URLField(
@@ -173,6 +190,7 @@ class NationalPark(models.Model):
         upload_to="parks/heroes/",
         blank=True,
         null=True,
+        max_length=500,
     )
 
     species = models.ManyToManyField(
@@ -191,15 +209,25 @@ class NationalPark(models.Model):
 
         ordering = ["name"]
 
-        verbose_name = "National Park"
+        verbose_name = "Protected Area"
 
-        verbose_name_plural = "National Parks"
+        verbose_name_plural = "Protected Areas"
+
+        constraints = [
+            models.UniqueConstraint(
+                fields=["name", "state", "protected_area_type"],
+                name="unique_protected_area_in_state",
+            ),
+        ]
 
     def save(self, *args, **kwargs):
 
         if not self.slug:
-
-            self.slug = slugify(self.name)
+            state_code = self.state.code if self.state_id else "india"
+            slug_base = slugify(
+                f"{self.name}-{state_code}-{self.protected_area_type}"
+            )
+            self.slug = slug_base
 
         super().save(*args, **kwargs)
 

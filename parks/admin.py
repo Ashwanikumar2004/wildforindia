@@ -35,6 +35,7 @@ class NationalParkAdmin(admin.ModelAdmin):
 
     list_display = (
         "name",
+        "protected_area_type",
         "state",
         "area",
         "safari_available",
@@ -43,6 +44,7 @@ class NationalParkAdmin(admin.ModelAdmin):
     )
 
     list_filter = (
+        "protected_area_type",
         "state",
         "is_featured",
         "is_active",
@@ -64,6 +66,7 @@ class NationalParkAdmin(admin.ModelAdmin):
             "fields": (
                 "name",
                 "slug",
+                "protected_area_type",
                 "state",
                 "description",
             )

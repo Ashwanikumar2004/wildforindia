@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ entry.species.common_name }} journal | WildFIndia{% endblock %}
+{% block content %}
+<section class="py-5 journal-page"><div class="container">
+    <a href="{% url 'wilddex' %}" class="text-accent">&larr; Your WildDex</a>
+    <h1 class="mt-4">{{ entry.species.common_name }}</h1>
+    <p>Your private journal entry. Added {{ entry.discovered_at|date:"j M Y" }}.</p>
+    <div class="row g-4">
+        <div class="col-lg-5">
+            {% if entry.source_identification and entry.source_identification.user_id == user.id %}
+            <img src="{% url 'identification_image' entry.source_identification.pk %}" alt="Your identification photograph" class="journal-photo rounded">
+            {% else %}{% include "includes/species_illustration.html" with species=entry.species image_class="journal-photo rounded" %}{% endif %}
+            <a href="{% url 'species_detail' entry.species.slug %}" class="btn btn-outline-light mt-3">Read species profile</a>
+        </div>
+        <div class="col-lg-7"><div class="content-panel">
+            <h2 class="h4">Your observation</h2>
+            <form method="post">{% csrf_token %}{{ form.non_field_errors }}
+                {% for field in form %}<div class="mb-3"><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% if field.help_text %}<p class="small mb-0">{{ field.help_text }}</p>{% endif %}{{ field.errors }}</div>{% endfor %}
+                <button class="btn btn-success" type="submit">Save journal</button>
+            </form>
+        </div>
+        <details class="content-panel mt-3"><summary>Remove this discovery</summary>
+            <p class="mt-3">This removes the journal notes and this species' XP from your WildDex. The original identification stays in your history.</p>
+            <form method="post" action="{% url 'wilddex_remove' entry.pk %}">{% csrf_token %}<button class="btn btn-outline-danger" type="submit">Confirm removal</button></form>
+        </details></div>
+    </div>
+</div></section>
+{% endblock %}

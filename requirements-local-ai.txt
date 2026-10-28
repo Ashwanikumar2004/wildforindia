@@ -1,0 +1,4 @@
+# Optional: install on a development computer for local SpeciesNet inference.
+# SpeciesNet and its model weights are too large for the current Vercel deployment.
+-r requirements.txt
+speciesnet==5.0.6

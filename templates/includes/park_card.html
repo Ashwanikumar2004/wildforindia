@@ -1,22 +1,12 @@
-{% load static %}
+{% load static catalogue_tags %}
+{% catalogue_image park as park_photo %}
+{% catalogue_media park as park_profile %}
 
 <div class="col-lg-4 col-md-6">
 
     <div class="species-card h-100">
 
-        {% if park.hero_image %}
-
-        <img src="{{ park.hero_image.url }}" alt="{{ park.name }}">
-
-        {% elif park.images.first %}
-
-        <img src="{{ park.images.first.image.url }}" alt="{{ park.name }}">
-
-        {% else %}
-
-        <img src="{% static 'images/default_park.jpg' %}" alt="{{ park.name }}">
-
-        {% endif %}
+        <img src="{{ park_photo }}" alt="{{ park.name }}" loading="lazy" decoding="async">
 
         <div class="species-content">
 
@@ -29,6 +19,8 @@
             </span>
 
             {% endif %}
+
+            <span class="status least">{{ park.get_protected_area_type_display }}</span>
 
             <h4>
 
@@ -46,7 +38,7 @@
 
             <p>
 
-                {{ park.description|truncatewords:18 }}
+                {% if park_profile.summary %}{{ park_profile.summary|truncatewords:22 }}{% else %}{{ park.description|truncatewords:18 }}{% endif %}
 
             </p>
 
@@ -56,7 +48,7 @@
 
                     <strong>Area:</strong>
 
-                    {{ park.area }} km²
+                    {% if park.area %}{{ park.area }} km²{% else %}Not listed{% endif %}
 
                 </span>
 
@@ -66,7 +58,7 @@
 
                     <strong>Established:</strong>
 
-                    {{ park.established_year }}
+                    {% if park.established_year %}{{ park.established_year }}{% else %}Not listed{% endif %}
 
                 </span>
 
@@ -74,7 +66,7 @@
 
             <a href="{% url 'park_detail' park.slug %}" class="explore-btn">
 
-                Explore Park →
+                Explore Area →
 
             </a>
 

@@ -6,24 +6,76 @@
 <section class="py-5">
     <div class="container" style="max-width: 900px;">
         <div class="text-center mb-5">
-            <span class="badge text-bg-success mb-3">Coming next: model connection</span>
+            <span class="badge text-bg-success mb-3">AI species suggestions</span>
             <h1 class="fw-bold">AI Wildlife Identifier</h1>
             <p class="lead text-muted">Upload a wildlife photo to discover which Indian species it may show.</p>
         </div>
 
         <div class="card border-0 shadow-sm">
             <div class="card-body p-4 p-md-5">
+                <p class="text-muted">Upload a clear photo (JPG or PNG, up to 4 MB). Your photo and results are saved to your account so you can view or delete them later.</p>
                 <div class="alert alert-info" role="status">
-                    This page is ready for the upload feature. The AI model is not connected yet, so it cannot identify an image at this stage.
+                    Identification uses SpeciesNet, a wildlife model designed mainly for camera-trap photos. The first local request downloads model weights and may take several minutes; later requests reuse the downloaded model.
                 </div>
-                <form>
-                    <label for="wildlife-photo" class="form-label fw-semibold">Choose a wildlife photo</label>
-                    <input id="wildlife-photo" class="form-control" type="file" accept="image/jpeg,image/png" disabled>
-                    <div class="form-text">For the first version, we plan to support JPG and PNG photos.</div>
-                    <button class="btn btn-success mt-4" type="button" disabled>Identify species (coming soon)</button>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-warning" role="alert">{{ form.non_field_errors }}</div>
+                    {% endif %}
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="{{ form.image.id_for_label }}">{{ form.image.label }}</label>
+                        {{ form.image }}
+                        {% for error in form.image.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                    </div>
+                    <button class="btn btn-success mt-2" type="submit">Identify species</button>
                 </form>
             </div>
         </div>
+
+        {% if prediction %}
+        <section class="card border-0 shadow-sm mt-4" aria-live="polite">
+            <div class="card-body p-4">
+                <span class="badge text-bg-success mb-2">Model suggestion</span>
+                <p class="small text-muted">Photo: {{ uploaded_name }}</p>
+                {% if prediction.species and prediction.accepted %}
+                    <h2 class="h3">{{ prediction.species.common_name }}</h2>
+                    <p class="text-muted fst-italic">{{ prediction.species.scientific_name }}</p>
+                    <p>{{ prediction.species.short_description }}</p>
+                    <p>Relative model score: {{ prediction.score_percent }}% (acceptance threshold: {{ prediction.threshold_percent }}%)</p>
+                    <a class="btn btn-outline-success" href="{% url 'species_detail' prediction.species.slug %}">View species details</a>
+                    <form class="d-inline" method="post" action="{% url 'wilddex_add_discovery' prediction.identification_id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="species_id" value="{{ prediction.species.pk }}">
+                        <button class="btn btn-success" type="submit">I confirmed this species — add to WildDex</button>
+                    </form>
+                {% elif prediction.species %}
+                    <h2 class="h3">The model is unsure</h2>
+                    <p>Possible candidate: <strong class="text-dark fw-semibold">{{ prediction.species.common_name }}</strong> (<i class="text-secondary">{{ prediction.species.scientific_name }}</i>).</p>
+                    <p>Its relative score is {{ prediction.score_percent }}%; this species needs at least {{ prediction.threshold_percent }}% before it can be confirmed from this result.</p>
+                    <a class="btn btn-outline-success" href="{% url 'species_detail' prediction.species.slug %}">Read species details</a>
+                {% else %}
+                    <h2 class="h3">AI suggestion not in WildDex yet</h2>
+                    <p>The AI suggests <strong class="text-dark fw-bold">{{ prediction.label }}</strong>{% if prediction.scientific_name %} (<i class="text-secondary">{{ prediction.scientific_name }}</i>){% endif %}. This means the species guide does not yet have a matching record that has been checked by a person. The name is the model's suggestion; species details and the WildDex add button are available only for verified catalogue records.</p>
+                    <p>Relative model score: {{ prediction.score_percent }}%. Treat this as a suggestion, especially if the photo is unclear.</p>
+                {% endif %}
+
+                {% if other_predictions %}
+                    <hr>
+                    <h3 class="h6">Other suggestions</h3>
+                    <ul class="mb-0">
+                        {% for item in other_predictions %}
+                            <li>
+                                {% if item.species %}<span class="text-dark fw-semibold">{{ item.species.common_name }}</span>{% else %}<span class="text-dark fw-semibold">{{ item.label }}</span>{% endif %}
+                                — {{ item.score_percent }}% match score
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <p class="small text-muted mt-3">AI results are suggestions, not confirmed identifications. Scores are relative to the candidate labels.</p>
+                <a class="btn btn-sm btn-outline-secondary" href="{% url 'identification_history' %}">View saved history</a>
+            </div>
+        </section>
+        {% endif %}
 
         <div class="row g-3 mt-4">
             <div class="col-md-4"><div class="card h-100 border-0 bg-light"><div class="card-body"><h2 class="h6">1. Upload</h2><p class="mb-0 text-muted">Choose a clear animal photo.</p></div></div></div>

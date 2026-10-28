@@ -1,0 +1,6 @@
+<footer class="site-footer py-5 mt-5"><div class="container">
+    <div class="row g-4"><div class="col-md-6"><a href="{% url 'home' %}" class="h4 text-white">WildFIndia</a><p class="mt-3">Discover India's wildlife. Learn about its habitats. Keep a personal record of the species you identify.</p></div>
+    <div class="col-md-3"><h2 class="h6">Explore</h2><ul class="list-unstyled"><li><a href="{% url 'species_list' %}">Species guide</a></li><li><a href="{% url 'parks_list' %}">Parks &amp; sanctuaries</a></li><li><a href="{% url 'parks_map' %}">Interactive map</a></li></ul></div>
+    <div class="col-md-3"><h2 class="h6">Your journey</h2><ul class="list-unstyled"><li><a href="{% url 'ai_identifier' %}">Identify a photo</a></li><li><a href="{% url 'wilddex' %}">My WildDex</a></li><li><a href="{% url 'about' %}">About &amp; image credits</a></li></ul></div></div>
+    <p class="small mb-0 mt-4">&copy; {% now "Y" %} WildFIndia. An educational wildlife project. Observe animals from a distance and respect local park rules.</p>
+</div></footer>

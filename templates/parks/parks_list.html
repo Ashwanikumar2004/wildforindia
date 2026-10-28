@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}
-National Parks | WildFIndia
+Protected Areas | WildFIndia
 {% endblock %}
 
 {% block content %}
@@ -17,11 +19,11 @@ National Parks | WildFIndia
             </span>
 
             <h1>
-                National Parks of India
+                National Parks & Wildlife Sanctuaries of India
             </h1>
 
             <p>
-                Discover India's breathtaking national parks, wildlife, and conservation treasures.
+                Explore national parks and wildlife sanctuaries across India.
             </p>
 
         </div>
@@ -38,20 +40,31 @@ National Parks | WildFIndia
 
                     <div class="col-lg-3">
 
-                        <input type="text" name="q" class="form-control search-input" placeholder="Search Parks..."
-                            value="{{ request.GET.q }}">
+                        <input type="text" name="q" class="form-control search-input" placeholder="Search protected areas..."
+                            value="{{ query }}" aria-label="Search protected areas">
 
+                    </div>
+
+                    <!-- Protected area type -->
+
+                    <div class="col-lg-2">
+                        <select name="type" class="form-select search-select" aria-label="Protected area type">
+                            <option value="">All protected areas</option>
+                            {% for value, label in area_types %}
+                            <option value="{{ value }}" {% if selected_type == value %}selected{% endif %}>{{ label }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
 
                     <!-- State -->
 
                     <div class="col-lg-2">
 
-                        <select name="state" class="form-select search-select">
+                        <select name="state" class="form-select search-select" aria-label="Filter by state">
 
                             <option value="">
 
-                                All States
+                                All states &amp; UTs
 
                             </option>
 
@@ -77,12 +90,12 @@ National Parks | WildFIndia
                         <select name="safari" class="form-select search-select">
 
                             <option value="">
-                                Safari
+                                Any safari
                             </option>
 
-                            <option value="yes">
-                                Available
-                            </option>
+                            <option value="yes" {% if selected_safari == "yes" %}selected{% endif %}>Safari available</option>
+                            <option value="no" {% if selected_safari == "no" %}selected{% endif %}>Safari unavailable</option>
+                            <option value="unknown" {% if selected_safari == "unknown" %}selected{% endif %}>Safari details missing</option>
 
                         </select>
 
@@ -98,9 +111,8 @@ National Parks | WildFIndia
                                 Featured
                             </option>
 
-                            <option value="yes">
-                                Featured Parks
-                            </option>
+                            <option value="yes" {% if selected_featured == "yes" %}selected{% endif %}>Featured only</option>
+                            <option value="no" {% if selected_featured == "no" %}selected{% endif %}>Not featured</option>
 
                         </select>
 
@@ -116,13 +128,9 @@ National Parks | WildFIndia
                                 Sort By
                             </option>
 
-                            <option value="name">
-                                Name
-                            </option>
+                            <option value="name" {% if selected_sort == "name" %}selected{% endif %}>Name: A-Z</option>
 
-                            <option value="area">
-                                Area
-                            </option>
+                            <option value="area" {% if selected_sort == "area" %}selected{% endif %}>Largest area</option>
 
                         </select>
 
@@ -146,6 +154,15 @@ National Parks | WildFIndia
 
         </form>
 
+        <p class="text-center mt-3 mb-0" aria-live="polite">
+            Showing <strong>{{ filtered_count }}</strong> of <strong>{{ total_count }}</strong> protected areas.
+        </p>
+
+        <p class="text-center small mt-2">
+            Names are compiled from the <a href="https://wildlifesafaris.in/list-of-national-parks-and-wildlife-sanctuaries/" target="_blank" rel="noopener noreferrer">state-wise WII protected-area lists</a>.
+            Some area, year, visitor, and location details are not available in that source and are marked “Not listed.”
+        </p>
+
         <!-- Park Cards -->
 
         <div class="row g-4 mt-5">
@@ -158,17 +175,17 @@ National Parks | WildFIndia
 
             <div class="col-12 text-center">
 
-                <img src="/static/images/empty.svg" width="180" class="mb-4" alt="No Parks">
+                <img src="{% static 'images/species/default_park.svg' %}" width="180" class="mb-4" alt="Cartoon national park illustration">
 
                 <h3>
 
-                    No National Parks Found
+                    No protected areas found
 
                 </h3>
 
                 <p class="text-light">
 
-                    Try changing your search filters.
+                    Try changing or clearing your search and filters.
 
                 </p>
 
@@ -182,7 +199,7 @@ National Parks | WildFIndia
 
         {% if parks.has_other_pages %}
 
-        <nav class="mt-5">
+        <nav class="parks-pagination mt-5" aria-label="Protected area pages">
 
             <ul class="pagination justify-content-center">
 
@@ -190,9 +207,9 @@ National Parks | WildFIndia
 
                 <li class="page-item">
 
-                    <a class="page-link" href="?page={{ parks.previous_page_number }}">
+                    <a class="page-link" href="?{% if pagination_query %}{{ pagination_query }}&amp;{% endif %}page={{ parks.previous_page_number }}" aria-label="Previous page">
 
-                        Previous
+                        <span aria-hidden="true">‹</span><span class="pagination-word">Previous</span>
 
                     </a>
 
@@ -200,11 +217,17 @@ National Parks | WildFIndia
 
                 {% endif %}
 
-                {% for page in parks.paginator.page_range %}
+                {% for page in pagination_pages %}
+
+                {% if page == pagination_ellipsis %}
+
+                <li class="page-item pagination-ellipsis" aria-hidden="true"><span class="page-link">{{ page }}</span></li>
+
+                {% else %}
 
                 <li class="page-item {% if parks.number == page %}active{% endif %}">
 
-                    <a class="page-link" href="?page={{ page }}">
+                    <a class="page-link" href="?{% if pagination_query %}{{ pagination_query }}&amp;{% endif %}page={{ page }}" {% if parks.number == page %}aria-current="page"{% endif %} aria-label="Page {{ page }}">
 
                         {{ page }}
 
@@ -212,15 +235,17 @@ National Parks | WildFIndia
 
                 </li>
 
+                {% endif %}
+
                 {% endfor %}
 
                 {% if parks.has_next %}
 
                 <li class="page-item">
 
-                    <a class="page-link" href="?page={{ parks.next_page_number }}">
+                    <a class="page-link" href="?{% if pagination_query %}{{ pagination_query }}&amp;{% endif %}page={{ parks.next_page_number }}" aria-label="Next page">
 
-                        Next
+                        <span class="pagination-word">Next</span><span aria-hidden="true">›</span>
 
                     </a>
 
@@ -229,6 +254,8 @@ National Parks | WildFIndia
                 {% endif %}
 
             </ul>
+
+            <p class="pagination-summary">Page {{ parks.number }} of {{ parks.paginator.num_pages }}</p>
 
         </nav>
 

@@ -12,15 +12,21 @@
 
 {% include "includes/park_about.html" %}
 
+{% if park.facilities.all %}
 {% include "includes/park_facilities.html" %}
+{% endif %}
 
 {% include "includes/park_species.html" %}
 
+{% if park.images.all or profile.path %}
 {% include "includes/park_gallery.html" %}
+{% endif %}
 
 {% include "includes/park_reviews.html" %}
 
+{% if park.routes.all %}
 {% include "includes/park_routes.html" %}
+{% endif %}
 
 {% include "includes/related_parks.html" %}
 

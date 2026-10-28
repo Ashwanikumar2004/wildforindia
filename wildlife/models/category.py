@@ -21,13 +21,15 @@ class Category(models.Model):
     icon = models.ImageField(
         upload_to="categories/icons/",
         blank=True,
-        null=True
+        null=True,
+        max_length=500,
     )
 
     cover_image = models.ImageField(
         upload_to="categories/covers/",
         blank=True,
-        null=True
+        null=True,
+        max_length=500,
     )
 
     color = models.CharField(

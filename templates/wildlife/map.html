@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Interactive Wildlife Map | WildFIndia{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/pages/map.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="wildlife-map-page">
+    <div class="container py-5">
+        <header class="map-heading mb-4">
+            <span class="map-eyebrow">Explore India’s wild places</span>
+            <h1>Wildlife map</h1>
+            <p>Explore India’s states and union territories, then filter wildlife regions to learn about their landscapes.</p>
+        </header>
+
+        {% if using_demo_regions %}
+        <div class="map-demo-note" role="note">
+            <strong>About the markers:</strong> Park markers are records from the project database, with approximate display coordinates. Markers labeled “example” are illustrative landscape examples, not actual park records, sightings, or confirmed species-range records.
+        </div>
+        {% endif %}
+
+        <div class="wildlife-map-layout">
+            <section class="map-visual-card" aria-label="Three-dimensional map of India">
+                <div class="map-visual-toolbar">
+                    <div>
+                        <span class="map-live-dot"></span>
+                        <span id="map-location-count">{{ map_locations|length }} wildlife regions</span>
+                    </div>
+                    <div class="map-visual-buttons">
+                        <button type="button" class="map-control-button" id="map-zoom-in" aria-label="Zoom in">+</button>
+                        <button type="button" class="map-control-button" id="map-zoom-out" aria-label="Zoom out">−</button>
+                        <button type="button" class="map-control-button map-reset-button" id="map-reset">Reset view</button>
+                    </div>
+                </div>
+                <div id="india-map-canvas" class="india-map-canvas" data-boundary-url="{% static 'data/india-states-simplified.geojson' %}">
+                    <div class="map-loading" id="map-loading" role="status">Loading the 3D map…</div>
+                    <div class="map-render-error" id="map-render-error" hidden></div>
+                </div>
+                <p class="map-gesture-hint">Drag to rotate <span>•</span> Scroll or pinch to zoom <span>•</span> Select a marker or state</p>
+                <div class="map-legend"><span class="map-legend-marker"></span> Protected area <span class="map-legend-boundary"></span> State or union territory boundary</div>
+            </section>
+
+            <aside class="map-information-card" aria-label="Map filters and wildlife information">
+                <section class="map-filters">
+                    <label class="map-state-label" for="map-state-filter">Explore a state or union territory</label>
+                    <select id="map-state-filter" class="map-state-select">
+                        <option value="all">All states and union territories</option>
+                    </select>
+                    <div class="map-panel-heading">
+                        <div>
+                            <span class="map-panel-kicker">Discover</span>
+                            <h2>Filter by species</h2>
+                        </div>
+                    </div>
+                    <div class="map-filter-list" role="group" aria-label="Filter map locations by species">
+                        <button type="button" class="map-filter-chip is-active" data-map-filter="all" aria-pressed="true">All wildlife</button>
+                        {% for species in species_catalogue %}
+                        <button type="button" class="map-filter-chip" data-map-filter="{{ species.id }}" aria-pressed="false">{{ species.name }}</button>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="map-selected-location" aria-live="polite">
+                    <span class="map-panel-kicker">Selected place</span>
+                    <h2 id="map-selected-title">Choose a marker</h2>
+                    <p id="map-selected-state" class="map-selected-state">Select a glowing point on the map or a place in the list.</p>
+                    <p id="map-selected-summary" class="map-selected-summary"></p>
+                    <div id="map-selected-species" class="map-selected-species"></div>
+                    <a id="map-selected-link" class="map-details-link" href="#" hidden>Explore park details <span aria-hidden="true">→</span></a>
+                </section>
+
+                <section class="map-location-section">
+                    <div class="map-panel-heading">
+                        <div>
+                            <span class="map-panel-kicker">On the map</span>
+                            <h2>Wildlife regions</h2>
+                        </div>
+                    </div>
+                    <div id="map-location-list" class="map-location-list">
+                        {% for location in map_locations %}
+                        <button type="button" class="map-location-button" data-location-id="{{ location.id }}" aria-pressed="false">
+                            <span class="map-location-marker" aria-hidden="true">{{ forloop.counter|stringformat:"02d" }}</span>
+                            <span class="map-location-label"><strong>{{ location.name }}</strong><small>{{ location.state }}{% if location.demo %} · example{% endif %}</small></span>
+                            <span class="map-location-arrow" aria-hidden="true">›</span>
+                        </button>
+                        {% empty %}
+                        <p class="map-empty-message">No parks with map coordinates have been added yet.</p>
+                        {% endfor %}
+                    </div>
+                </section>
+                <p class="map-data-note">Pins show approximate locations. Open a park profile for its sources and visitor information.</p>
+            </aside>
+        </div>
+        <p class="map-source-note">Boundary data: Vardhan Maps, based on © OpenStreetMap contributors (<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">ODbL 1.0</a>). This community map is an approximation, not an official boundary reference. Park positions are approximate display points, not entry gates or surveyed boundaries. Species are listed only when linked to that park in the guide.</p>
+    </div>
+</section>
+
+{{ map_locations|json_script:"wildlife-map-locations" }}
+{% endblock %}
+
+{% block extra_scripts %}
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"
+        }
+    }
+</script>
+<script type="module" src="{% static 'js/india-map.js' %}"></script>
+{% endblock %}

@@ -14,7 +14,7 @@
 
         <!-- Mobile Toggle -->
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation">
 
             <span class="navbar-toggler-icon"></span>
 
@@ -44,7 +44,7 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link {% if url_name == 'species_list' or url_name == 'species_detail' %}active{% endif %}"
+                    <a class="nav-link {% if url_name == 'species_list' or url_name == 'species_detail' or url_name == 'search_species' %}active{% endif %}"
                         href="{% url 'species_list' %}">
 
                         Explore
@@ -70,7 +70,7 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link {% if url_name == 'parks_map' %}active{% endif %}" href="#">
+                    <a class="nav-link {% if url_name == 'parks_map' %}active{% endif %}" href="{% url 'parks_map' %}">
 
                         Interactive Map
 
@@ -94,7 +94,7 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link {% if url_name == 'wilddex' %}active{% endif %}" href="{% url 'wilddex' %}">
+                    <a class="nav-link {% if url_name == 'wilddex' or url_name == 'wilddex_entry' %}active{% endif %}" href="{% url 'wilddex' %}">
 
                         WildDex
 
@@ -108,7 +108,8 @@
 
             <div class="d-flex align-items-center gap-2">
                 {% if user.is_authenticated %}
-                    <span class="text-white small">Hi, {{ user.username }}</span>
+                    <a class="text-white small" href="{% url 'profile' %}">Hi, {{ user.username }}</a>
+                    <a class="btn btn-outline-light btn-sm" href="{% url 'identification_history' %}">My history</a>
                     <form method="post" action="{% url 'logout' %}">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-outline-light btn-sm">Log out</button>

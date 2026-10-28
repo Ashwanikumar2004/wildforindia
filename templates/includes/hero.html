@@ -1,3 +1,4 @@
+{% load catalogue_tags static %}
 <section class="hero-section">
 
     <div class="container">
@@ -23,19 +24,19 @@
 
                     Explore India's rich biodiversity through AI-powered
                     wildlife identification, interactive maps,
-                    citizen science, and immersive 3D experiences.
+                    a personal wildlife journal, and immersive 3D experiences.
 
                 </p>
 
                 <div class="hero-buttons mt-5">
 
-                    <a href="#" class="btn btn-success btn-lg">
+                    <a href="{% url 'species_list' %}" class="btn btn-success btn-lg">
 
                         Explore Wildlife
 
                     </a>
 
-                    <a href="#" class="btn btn-outline-light btn-lg ms-3">
+                    <a href="{% url 'ai_identifier' %}" class="btn btn-outline-light btn-lg ms-3">
 
                         AI Identifier
 
@@ -49,8 +50,9 @@
 
             <div class="col-lg-6 text-center">
 
-                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=700" class="img-fluid hero-image"
-                    alt="Tiger">
+                {% if featured_species %}{% catalogue_image featured_species.0 as hero_photo %}
+                <img src="{{ hero_photo }}" class="img-fluid hero-image" alt="{{ featured_species.0.common_name }}">
+                {% else %}<img src="{% static 'images/species/default_species.svg' %}" class="img-fluid hero-image" alt="Wildlife illustration">{% endif %}
 
             </div>
 

@@ -24,7 +24,7 @@ Search Results | WildFIndia
 
             <h1 class="mt-3">
 
-                Search Results
+                Explore wildlife
 
             </h1>
 
@@ -38,6 +38,10 @@ Search Results | WildFIndia
 
             </p>
 
+            {% elif selected_category or selected_habitat or selected_state %}
+
+            <p class="text-muted">Showing species that match your filters.</p>
+
             {% else %}
 
             <p class="text-muted">
@@ -50,11 +54,51 @@ Search Results | WildFIndia
 
             <p class="fw-semibold">
 
-                {{ species|length }} Species Found
+                {{ result_count }} Species Found
 
             </p>
 
         </div>
+
+        <form action="{% url 'search_species' %}" method="GET" class="search-card mb-5">
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-4 col-md-6">
+                    <input type="search" name="q" class="form-control search-input"
+                        placeholder="Name, scientific name, or habitat" value="{{ query }}" aria-label="Search wildlife species">
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <select name="state" class="form-select search-select" aria-label="Filter by recorded state">
+                        <option value="">All recorded states</option>
+                        {% for state in states %}
+                        <option value="{{ state.slug }}" {% if selected_state == state.slug %}selected{% endif %}>{{ state.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <select name="category" class="form-select search-select" aria-label="Filter by category">
+                        <option value="">All categories</option>
+                        {% for category in categories %}
+                        <option value="{{ category.slug }}" {% if selected_category == category.slug %}selected{% endif %}>{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <select name="habitat" class="form-select search-select" aria-label="Filter by habitat">
+                        <option value="">All habitats</option>
+                        {% for habitat in habitats %}
+                        <option value="{{ habitat.slug }}" {% if selected_habitat == habitat.slug %}selected{% endif %}>{{ habitat.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-lg-2 d-grid">
+                    <button type="submit" class="btn btn-success search-btn">Update results</button>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small class="text-muted">State results use recorded species ranges; an empty match is not proof a species is absent.</small>
+                <a href="{% url 'search_species' %}" class="d-inline-block ms-3">Clear filters</a>
+            </div>
+        </form>
 
         <!-- Results -->
 
@@ -70,7 +114,7 @@ Search Results | WildFIndia
 
                 <div class="text-center py-5">
 
-                    <img src="{% static 'images/empty.svg' %}" width="220" class="mb-4" alt="No Results">
+                    <img src="{% static 'images/species/default_species.svg' %}" width="220" class="mb-4" alt="Animal illustration">
 
                     <h3>
 
@@ -98,6 +142,7 @@ Search Results | WildFIndia
 
         </div>
 
+        {% include "includes/pagination.html" %}
     </div>
 
 </section>

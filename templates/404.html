@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Page not found | WildFIndia{% endblock %}
+{% block content %}<section class="py-5"><div class="container text-center"><span class="section-tag">404</span><h1 class="mt-4">This trail ends here</h1><p>The page may have moved, or this record is not available.</p><a href="{% url 'home' %}" class="btn btn-success">Back to home</a><a href="{% url 'species_list' %}" class="btn btn-outline-light ms-2">Explore wildlife</a></div></section>{% endblock %}

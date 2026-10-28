@@ -3,50 +3,69 @@
 {% block title %}WildDex | WildFIndia{% endblock %}
 
 {% block content %}
-<section class="py-5">
+<section class="py-5 journal-page">
     <div class="container">
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
             <div>
                 <span class="badge text-bg-success mb-2">Wildlife journal</span>
                 <h1 class="fw-bold mb-1">Your WildDex</h1>
-                <p class="text-muted mb-0">A sample collection showing how wildlife discoveries could be presented.</p>
+                <p class="text-muted mb-0">Species you confirmed from the verified wildlife guide.</p>
             </div>
-            <span class="badge rounded-pill text-bg-warning">Demo data</span>
-        </div>
-
-        <div class="alert alert-warning" role="status">
-            This is sample content for preview only. Discoveries and XP are not saved to your account yet.
+            <div class="d-flex gap-2 flex-wrap"><a class="btn btn-success" href="{% url 'ai_identifier' %}">Identify a photo</a><a class="btn btn-outline-light" href="{% url 'wilddex_export' %}">Export my journal</a></div>
         </div>
 
         <div class="row g-3 mb-5">
-            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Experience points</p><p class="h3 mb-0">{{ demo_xp }} XP</p></div></div></div>
-            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Explorer level</p><p class="h3 mb-0">{{ demo_level }}</p></div></div></div>
-            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Discoveries</p><p class="h3 mb-0">{{ demo_discoveries }}</p></div></div></div>
-            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Next milestone</p><p class="h3 mb-0">1 species away</p></div></div></div>
+            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Experience points</p><p class="h3 mb-0">{{ experience_points }} XP</p></div></div></div>
+            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Explorer level</p><p class="h3 mb-0">{{ explorer_level }}</p></div></div></div>
+            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Discoveries</p><p class="h3 mb-0">{{ discovery_count }}</p></div></div></div>
+            <div class="col-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body"><p class="small text-muted mb-1">Next level</p><p class="h3 mb-0">{{ xp_to_next_level }} XP away</p></div></div></div>
         </div>
 
-        <h2 class="h3 fw-bold mb-3">Species collection</h2>
+        <div class="content-panel mb-4">
+            <div class="d-flex justify-content-between gap-2"><span>Collection progress</span><strong>{{ discovery_count }} / {{ total_species }} species</strong></div>
+            <div class="progress mt-3" role="progressbar" aria-label="Collection completion" aria-valuenow="{{ completion_percent }}" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-success" style="width: {{ completion_percent }}%"></div></div>
+            <p class="small mt-3 mb-0">Confirm a suggestion from your photo to collect a species. Each species earns XP once. Journal notes are private to your account.</p>
+        </div>
+        <h2 class="h3 fw-bold mb-3">Verified species collection</h2>
+        <form method="get" class="content-panel mb-4"><div class="row g-3">
+            <div class="col-md-4"><label for="journal-q" class="form-label">Find a species</label><input id="journal-q" name="q" type="search" value="{{ query }}" class="form-control" placeholder="Common or scientific name"></div>
+            <div class="col-md-2"><label for="journal-status" class="form-label">Collection</label><select id="journal-status" name="status" class="form-select"><option value="all">All species</option><option value="discovered" {% if selected_status == 'discovered' %}selected{% endif %}>Discovered</option><option value="undiscovered" {% if selected_status == 'undiscovered' %}selected{% endif %}>Undiscovered</option></select></div>
+            <div class="col-md-2"><label for="journal-category" class="form-label">Category</label><select id="journal-category" name="category" class="form-select"><option value="">All categories</option>{% for category in categories %}<option value="{{ category.slug }}" {% if selected_category == category.slug %}selected{% endif %}>{{ category.name }}</option>{% endfor %}</select></div>
+            <div class="col-md-2"><label for="journal-sort" class="form-label">Sort</label><select id="journal-sort" name="sort" class="form-select"><option value="name">Name</option><option value="recent" {% if selected_sort == 'recent' %}selected{% endif %}>Recent discoveries</option><option value="xp" {% if selected_sort == 'xp' %}selected{% endif %}>XP reward</option></select></div>
+            <div class="col-md-2 d-flex align-items-end"><button class="btn btn-success w-100">Apply</button></div>
+        </div><a href="{% url 'wilddex' %}" class="text-accent d-inline-block mt-3">Clear filters</a></form>
         <div class="row g-4">
-            {% for item in demo_collection %}
+            {% for item in species_collection %}
+            {% with species=item.species entry=item.entry %}
             <div class="col-sm-6 col-lg-3">
                 <article class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center">
-                        <div class="display-3 mb-2" aria-hidden="true">{% if item.discovered %}{{ item.icon }}{% else %}❔{% endif %}</div>
-                        {% if item.discovered %}
-                            <h3 class="h5">{{ item.name }}</h3>
-                            <p class="small text-muted fst-italic mb-2">{{ item.scientific_name }}</p>
+                        {% include "includes/species_illustration.html" with species=species image_class="img-fluid rounded mb-3" %}
+                        {% if entry %}
+                            <h3 class="h5">{{ species.common_name }}</h3>
+                            <p class="small text-muted fst-italic mb-2">{{ species.scientific_name }}</p>
                             <span class="badge text-bg-success">Discovered</span>
-                            <span class="badge text-bg-light">{{ item.category }}</span>
-                            <p class="small mt-3 mb-0">Conservation status: {{ item.status }}</p>
+                            <span class="badge text-bg-light">{{ species.category.name }}</span>
+                            <p class="small mt-3 mb-0">Conservation status: {{ species.conservation_status.name }}</p>
+                            <p class="small text-muted">Added {{ entry.discovered_at|date:"M j, Y" }} · {{ species.xp_reward }} XP</p>
+                            <a class="btn btn-sm btn-outline-success" href="{% url 'species_detail' species.slug %}">Species details</a>
+                            <a class="btn btn-sm btn-success mt-2" href="{% url 'wilddex_entry' entry.pk %}">Open journal</a>
                         {% else %}
-                            <h3 class="h5">Undiscovered species</h3>
-                            <p class="text-muted small mb-0">Identify another species to add it to your journal.</p>
+                            <h3 class="h5">{{ species.common_name }}</h3>
+                            <span class="badge text-bg-secondary mb-2">Undiscovered species</span>
+                            <p class="text-muted small mb-0">Try the identifier, then confirm a suggestion to add it.</p>
+                            <a class="btn btn-sm btn-outline-success mt-3" href="{% url 'species_detail' species.slug %}">Learn about this species</a>
                         {% endif %}
                     </div>
                 </article>
             </div>
+            {% endwith %}
+            {% empty %}
+            <div class="col-12"><div class="content-panel text-center"><h3 class="h5">No species match these filters</h3><p>Try another name or choose all species. Confirm a photo suggestion to start your collection.</p><a href="{% url 'wilddex' %}" class="btn btn-outline-light">Reset filters</a></div></div>
             {% endfor %}
         </div>
+        {% include "includes/pagination.html" %}
+        <a class="btn btn-success mt-4" href="{% url 'ai_identifier' %}">Identify a wildlife photo</a>
     </div>
 </section>
 {% endblock %}

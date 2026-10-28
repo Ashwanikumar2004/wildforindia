@@ -4,15 +4,7 @@
 
     <div class="species-card">
 
-        {% if species.primary_image %}
-
-        <img src="{{ species.primary_image.image.url }}" alt="{{ species.common_name }}">
-
-        {% else %}
-
-        <img src="{% static 'images/species/default_species.jpg' %}" alt="{{ species.common_name }}">
-
-        {% endif %}
+        {% include "includes/species_illustration.html" with species=species image_class="species-card-image" %}
 
         <div class="species-content">
 

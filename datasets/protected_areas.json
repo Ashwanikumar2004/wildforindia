@@ -1,0 +1,3553 @@
+{
+  "source": "https://wildlifesafaris.in/list-of-national-parks-and-wildlife-sanctuaries/",
+  "national_parks_as_of": "August 2026",
+  "wildlife_sanctuaries_as_of": "February 2025 (WII list)",
+  "states": {
+    "Andaman and Nicobar Islands": {
+      "code": "IN-AN",
+      "region": "South"
+    },
+    "Andhra Pradesh": {
+      "code": "IN-AP",
+      "region": "South"
+    },
+    "Arunachal Pradesh": {
+      "code": "IN-AR",
+      "region": "North-East"
+    },
+    "Assam": {
+      "code": "IN-AS",
+      "region": "North-East"
+    },
+    "Bihar": {
+      "code": "IN-BR",
+      "region": "East"
+    },
+    "Chandigarh": {
+      "code": "IN-CH",
+      "region": "North"
+    },
+    "Chhattisgarh": {
+      "code": "IN-CG",
+      "region": "Central"
+    },
+    "Dadra and Nagar Haveli and Daman and Diu": {
+      "code": "IN-DH",
+      "region": "West"
+    },
+    "Delhi": {
+      "code": "IN-DL",
+      "region": "North"
+    },
+    "Goa": {
+      "code": "IN-GA",
+      "region": "West"
+    },
+    "Gujarat": {
+      "code": "IN-GJ",
+      "region": "West"
+    },
+    "Haryana": {
+      "code": "IN-HR",
+      "region": "North"
+    },
+    "Himachal Pradesh": {
+      "code": "IN-HP",
+      "region": "North"
+    },
+    "Jammu and Kashmir": {
+      "code": "IN-JK",
+      "region": "North"
+    },
+    "Jharkhand": {
+      "code": "IN-JH",
+      "region": "East"
+    },
+    "Karnataka": {
+      "code": "IN-KA",
+      "region": "South"
+    },
+    "Kerala": {
+      "code": "IN-KL",
+      "region": "South"
+    },
+    "Ladakh": {
+      "code": "IN-LA",
+      "region": "North"
+    },
+    "Lakshadweep": {
+      "code": "IN-LD",
+      "region": "South"
+    },
+    "Madhya Pradesh": {
+      "code": "IN-MP",
+      "region": "Central"
+    },
+    "Maharashtra": {
+      "code": "IN-MH",
+      "region": "West"
+    },
+    "Manipur": {
+      "code": "IN-MN",
+      "region": "North-East"
+    },
+    "Meghalaya": {
+      "code": "IN-ML",
+      "region": "North-East"
+    },
+    "Mizoram": {
+      "code": "IN-MZ",
+      "region": "North-East"
+    },
+    "Nagaland": {
+      "code": "IN-NL",
+      "region": "North-East"
+    },
+    "Odisha": {
+      "code": "IN-OD",
+      "region": "East"
+    },
+    "Puducherry": {
+      "code": "IN-PY",
+      "region": "South"
+    },
+    "Punjab": {
+      "code": "IN-PB",
+      "region": "North"
+    },
+    "Rajasthan": {
+      "code": "IN-RJ",
+      "region": "North"
+    },
+    "Sikkim": {
+      "code": "IN-SK",
+      "region": "North-East"
+    },
+    "Tamil Nadu": {
+      "code": "IN-TN",
+      "region": "South"
+    },
+    "Telangana": {
+      "code": "IN-TS",
+      "region": "South"
+    },
+    "Tripura": {
+      "code": "IN-TR",
+      "region": "North-East"
+    },
+    "Uttar Pradesh": {
+      "code": "IN-UP",
+      "region": "North"
+    },
+    "Uttarakhand": {
+      "code": "IN-UT",
+      "region": "North"
+    },
+    "West Bengal": {
+      "code": "IN-WB",
+      "region": "East"
+    }
+  },
+  "records": [
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Campbell Bay National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Galathea Bay National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Mahatma Gandhi Marine (Wandoor) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Middle Button Island National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Mount Manipur National Park (formerly Mount Harriet)"
+    },
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "North Button Island National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Rani Jhansi Marine National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Saddle Peak National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andaman and Nicobar Islands",
+      "name": "South Button Island National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andhra Pradesh",
+      "name": "Papikonda National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andhra Pradesh",
+      "name": "Rajiv Gandhi (Rameswaram) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Andhra Pradesh",
+      "name": "Sri Venkateswara National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Arunachal Pradesh",
+      "name": "Mouling National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Arunachal Pradesh",
+      "name": "Namdapha National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Assam",
+      "name": "Dehing Patkai National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Assam",
+      "name": "Dibru-Saikhowa National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Assam",
+      "name": "Kaziranga National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Assam",
+      "name": "Manas National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Assam",
+      "name": "Nameri National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Assam",
+      "name": "Orang National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Assam",
+      "name": "Raimona National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Bihar",
+      "name": "Valmiki National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Chhattisgarh",
+      "name": "Guru Ghasidas (Sanjay) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Chhattisgarh",
+      "name": "Indravati National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Chhattisgarh",
+      "name": "Kanger Valley National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Goa",
+      "name": "Bhagwan Mahaveer (Mollem) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Gujarat",
+      "name": "Blackbuck (Velavadar) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Gujarat",
+      "name": "Gir National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Gujarat",
+      "name": "Marine National Park, Gulf of Kachchh"
+    },
+    {
+      "type": "national_park",
+      "state": "Gujarat",
+      "name": "Vansda National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Haryana",
+      "name": "Kalesar National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Haryana",
+      "name": "Sultanpur National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Himachal Pradesh",
+      "name": "Great Himalayan National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Himachal Pradesh",
+      "name": "Inderkilla National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Himachal Pradesh",
+      "name": "Khirganga National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Himachal Pradesh",
+      "name": "Pin Valley National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Himachal Pradesh",
+      "name": "Simbalbara National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Jammu and Kashmir",
+      "name": "Dachigam National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Jammu and Kashmir",
+      "name": "Kishtwar High Altitude National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Jammu and Kashmir",
+      "name": "Salim Ali National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Jharkhand",
+      "name": "Betla National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Karnataka",
+      "name": "Anshi National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Karnataka",
+      "name": "Bandipur National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Karnataka",
+      "name": "Bannerghatta National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Karnataka",
+      "name": "Kudremukh National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Karnataka",
+      "name": "Nagarhole National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Kerala",
+      "name": "Anamudi Shola National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Kerala",
+      "name": "Eravikulam National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Kerala",
+      "name": "Mathikettan Shola National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Kerala",
+      "name": "Pampadum Shola National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Kerala",
+      "name": "Periyar National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Kerala",
+      "name": "Silent Valley National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Ladakh",
+      "name": "Hemis National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Bandhavgarh National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Ghughua Fossil National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Kanha National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Kuno National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Madhav National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Panna National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Pench National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Sanjay National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Satpura National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Madhya Pradesh",
+      "name": "Van Vihar National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Maharashtra",
+      "name": "Chandoli National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Maharashtra",
+      "name": "Gugamal National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Maharashtra",
+      "name": "Nawegaon National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Maharashtra",
+      "name": "Pench National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Maharashtra",
+      "name": "Sanjay Gandhi National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Maharashtra",
+      "name": "Tadoba National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Manipur",
+      "name": "Keibul Lamjao National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Meghalaya",
+      "name": "Balphakram National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Meghalaya",
+      "name": "Nokrek National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Mizoram",
+      "name": "Murlen National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Mizoram",
+      "name": "Phawngpui (Blue Mountain) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Nagaland",
+      "name": "Intanki (Ntangki) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Odisha",
+      "name": "Bhitarkanika National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Odisha",
+      "name": "Similipal National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Rajasthan",
+      "name": "Desert National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Rajasthan",
+      "name": "Keoladeo National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Rajasthan",
+      "name": "Mukundra Hills National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Rajasthan",
+      "name": "Ranthambore National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Rajasthan",
+      "name": "Sariska National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Sikkim",
+      "name": "Khangchendzonga National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Tamil Nadu",
+      "name": "Guindy National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Tamil Nadu",
+      "name": "Gulf of Mannar Marine National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Tamil Nadu",
+      "name": "Indira Gandhi (Anamalai) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Tamil Nadu",
+      "name": "Mudumalai National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Tamil Nadu",
+      "name": "Mukurthi National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Telangana",
+      "name": "Kasu Brahmananda Reddy National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Telangana",
+      "name": "Mahavir Harina Vanasthali National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Telangana",
+      "name": "Mrugavani National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Tripura",
+      "name": "Bison (Rajbari) National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Tripura",
+      "name": "Clouded Leopard National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Uttar Pradesh",
+      "name": "Dudhwa National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Uttarakhand",
+      "name": "Jim Corbett National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Uttarakhand",
+      "name": "Gangotri National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Uttarakhand",
+      "name": "Govind National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Uttarakhand",
+      "name": "Nanda Devi National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Uttarakhand",
+      "name": "Rajaji National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "Uttarakhand",
+      "name": "Valley of Flowers National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "West Bengal",
+      "name": "Buxa National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "West Bengal",
+      "name": "Gorumara National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "West Bengal",
+      "name": "Jaldapara National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "West Bengal",
+      "name": "Neora Valley National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "West Bengal",
+      "name": "Singalila National Park"
+    },
+    {
+      "type": "national_park",
+      "state": "West Bengal",
+      "name": "Sundarbans National Park"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Coringa Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Gundla Brahmeswaram Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Kambalakonda Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Koundinya Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Kolleru Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Krishna Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Nagarjuna Sagar-Srisailam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Nellapattu Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Pulicat Lake Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Rollapadu Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Sri Lankamalleswara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Sri Penusila Narasimha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andhra Pradesh",
+      "name": "Sri Venkateswara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "D’ Ering Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Dibang Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Eagle Nest Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Itanagar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Kamala Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Kamlang Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Kane Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Mahao Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Pakke (Pakhui) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Ringba-Roba Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Sessa Orchid Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Tale Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Arunachal Pradesh",
+      "name": "Yordi Rabe Supse Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Amchang Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Borail Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Bornadi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Bherjan-Borajan-Padumoni Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Burachapori Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Chakrasila Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Deepor Beel Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "East Karbi Anglong Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Garampani Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Hollongapar Gibbon Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Lawkhowa Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Marat Longri Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Nambor Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Nambor-Doigrung Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Pabitora Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Pani-Dihing Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Assam",
+      "name": "Sonai Rupai Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Baraila Jheel Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Bhimbandh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Gautam Buddha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Kaimur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Kanwar Jheel Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Kusheshwarasthan Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Nagi Dam Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Nakti Dam Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Rajauli (Nawada) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Rajgir Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Udaipur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Valmiki Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Bihar",
+      "name": "Vikramshila Gangetic Dolphin Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Achanakmar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Badalkhol Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Barnawapara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Bhairamgarh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Bhoramdev Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Sarangarh-Gomardha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Pamed Wild Buffalo Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Semarsot Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Sitanadi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Tamor Pingla Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chhattisgarh",
+      "name": "Udanti Wild Buffalo Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Goa",
+      "name": "Bhagwan Mahavir Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Goa",
+      "name": "Bondla Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Goa",
+      "name": "Cotigao Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Goa",
+      "name": "Dr. Salim Ali Bird Sanctuary (Chorao)"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Goa",
+      "name": "Madei Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Goa",
+      "name": "Netravali Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Balaram Ambaji Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Barda Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Gaga (Great Indian Bustard) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Gir Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Girnar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Hingolgadh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Jambughoda Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Jessore Sloth Bear Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Kachchh (Lala) Great Indian Bustard Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Kachchh Desert Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Khijadiya Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Marine (Gulf of Kachchh) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Mitiyala Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Nal Sarovar Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Narayan Sarovar Chinkara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Paniya Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Porbandar Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Purna Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Rampara Vidi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Ratanmahal Sloth Bear Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Shoolpaneswar (Dhumkhal) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Thol Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Gujarat",
+      "name": "Wild Ass Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Haryana",
+      "name": "Bhindawas Lake Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Haryana",
+      "name": "Bir Shikargah Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Haryana",
+      "name": "Chhilchhila Lake Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Haryana",
+      "name": "Kalesar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Haryana",
+      "name": "Khaparwas Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Haryana",
+      "name": "Khol-Hi-Raitan (Morni Hills) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Haryana",
+      "name": "Nahar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Haryana",
+      "name": "Abubshahar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Bandli Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Chail Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Chandratal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Churdhar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Daranghati I & II Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Dhauladhar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Gamgul Siyabehi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Kais Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Kalatop-Khajjiar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Kanawar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Khokhan Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Kibber Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Kugti Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Lippa Asrang Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Majathal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Manali Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Nargu Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Pong Dam Lake Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Rakchham Chitkul (Sangla Valley) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Renukaji Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Rupi Bhaba Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Sech Tuan Nala Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Shikari Devi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Shimla Water Catchment Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Talra Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Himachal Pradesh",
+      "name": "Tundah Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Dalma Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Gautam Budha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Hazaribagh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Kodarma Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Lawalong Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Mahuadanr Wolf Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Palamau Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Palkot Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Parasnath Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Topchanchi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jharkhand",
+      "name": "Udhwa Lake Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Adichunchunagiri Peacock Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Arabithittu Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Arsikere Sloth Bear Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Attiveri Bird Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Bankapura Wolf Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Bhadra Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Bhimgad Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Biligiri Rangaswamy Temple (B.R.T.) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Brahmagiri Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Bukkapatna Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Cauvery Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Cauvery Extension Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Chincholi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Dandeli Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Daroji Bear Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Ghataprabha Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Gudavi Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Gudekote Extension Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Gudekote Sloth Bear Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Jogimatti Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Kamasandra Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Kappathagudda Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Malai Mahadeshwara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Melkote Temple Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Mookambika Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Nugu Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Pushpagiri Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Ramadevara Betta Vulture Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Ranebennur Black Buck Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Ranganathittu Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Rangayyanadurga Four-horned Antelope Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Sharavathi Valley LTM Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Shettihalli Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Someshwara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Talakaveri Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Thimlapura Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Uttaregudda Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Karnataka",
+      "name": "Yadahalli Chinkara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Aralam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Chimmony Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Chinnar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Chulannur Peafowl Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Idukki Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Karimpuzha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Kottiyoor Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Kurinjimala Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Malabar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Mangalavanam Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Neyyar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Parambikulam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Peechi-Vazhani Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Peppara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Periyar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Shendurney Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Thattekad Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Kerala",
+      "name": "Wayanad Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Bagdara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Bori Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Gandhi Sagar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Ghatigaon Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Karera Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Ken Gharial Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Kheoni Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Narsighgarh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "National Chambal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Nouradehi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Orcha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Pachmarhi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Gangau Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Panpatha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Pench Moghli Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Phen Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Ralamandal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Ratapani Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Sailana Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Sanjay Dubari Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Sardarpur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Singhori Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Son Gharial Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Madhya Pradesh",
+      "name": "Veerangana Durgavati Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Ambabarva Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Andhari Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Aner-Dam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Bhamragadh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Bhimashankar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Bor Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Chaprala Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Deulgaon-Rehekuri Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Dhyanganga Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Extended Mansingdeo Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Gautala Autramghat Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Ghodazari Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Great Indian Bustard Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Isapur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Jaikwadi Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Kalsubai Harishchandragad Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Kanhargaon Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Karanja-Sohol Black-Buck Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Karnala Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Katepurna Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Koka Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Koyana Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Lonar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Malvan Marine Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Mansingdeo Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Mayureshwar-Supe Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Melghat Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Nagzira Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Naigoan-Mayur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Nandurmadhyameshwar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Narnala Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Navegaon Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "New Bor Extended Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "New Bor Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "New Great Indian Bustard (Gangewadi) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "New Nagzira Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Painganga Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Phansad Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Pranhita Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Radhanagri Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Sagareshwar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Sudhagad Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Tamhini Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Tansa Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Thane Creek Flamingo Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Tipeshwar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Tungareshwar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Umred-Karhandla Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Umred-Pauni-Karhandla Extended Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Wan Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Yaval Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Maharashtra",
+      "name": "Yedshi Ramlingghat Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Manipur",
+      "name": "Yangoupokpi Lokchao Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Manipur",
+      "name": "Khongjaingamba Ching Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Manipur",
+      "name": "Jiri Makru Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Manipur",
+      "name": "Kailam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Manipur",
+      "name": "Zeilad Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Manipur",
+      "name": "Bunning Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Manipur",
+      "name": "Thinungei Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Meghalaya",
+      "name": "Baghmara Pitcher Plant Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Meghalaya",
+      "name": "Narpuh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Meghalaya",
+      "name": "Nongkhyllem Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Meghalaya",
+      "name": "Siju Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Mizoram",
+      "name": "Khawnglung Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Mizoram",
+      "name": "Lengteng Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Mizoram",
+      "name": "Ngengpui Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Mizoram",
+      "name": "Pualreng Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Mizoram",
+      "name": "Tawi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Mizoram",
+      "name": "Thorangtlang Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Mizoram",
+      "name": "Tokalo Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Nagaland",
+      "name": "Fakim Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Nagaland",
+      "name": "Puliebadze Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Nagaland",
+      "name": "Singphan Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Badrama Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Baisipalli Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Balukhand Konark Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Bhitarkanika Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Chandaka Dampara Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Chilika (Nalaban) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Debrigarh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Gahirmatha (Marine) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Hadgarh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Kapilash Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Karlapat Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Khalasuni Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Kothagarh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Kuldiha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Lakhari Valley Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Nandankanan Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Satkosia Gorge Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Simlipal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Odisha",
+      "name": "Sunabeda Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Abohar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Bir Aishvan Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Bir Bhadson Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Bir Bunerheri Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Bir Dosanjh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Bir Gurdialpura Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Bir Mehaswala Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Bir Motibagh Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Harike Lake Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Jhajjar Bacholi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Kathlaur Kushlian Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Nangal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Punjab",
+      "name": "Takhni-Rehampur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Band Baretha Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Bassi Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Bhensrodgarh Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Darrah Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Desert National Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Jaisamand Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Jamwa Ramgarh Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Jawahar Sagar Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Keladevi Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Kesarbagh Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Kumbhalgarh Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Mount Abu Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Nahargarh Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "National Gharial Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Pulwari ki Naal Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Ramgarh Vishdhari Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Ramsagar Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Sajjangarh Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Sariska Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Sawai Madhopur Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Sawaiman Singh Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Shergarh Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Sitamata Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Talchappar Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Todgarh Raoli Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Rajasthan",
+      "name": "Van Vihar Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Sikkim",
+      "name": "Barsey Rhododendron Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Sikkim",
+      "name": "Fambong Lho Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Sikkim",
+      "name": "Kitam Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Sikkim",
+      "name": "Kyongnosla Alpine Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Sikkim",
+      "name": "Maenam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Sikkim",
+      "name": "Pangolakha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Sikkim",
+      "name": "Shingba Rhododendron Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Cauvery North Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Cauvery South Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Chitrangudi Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Gangaikondan Spotted Deer Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Indira Gandhi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Kadavur Slender Loris Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Kalakad Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Kaniyakumari Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Kanjirankulam Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Karaivetti Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Karikili Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Kazhuveli Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Kodaikanal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Koonthankulam-Kadankulam Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Meghamalai Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Melaselvanur-Kelaselvanur Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Mudumalai Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Mundanthurai Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Nanjarayan Tank Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Nellai Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Oussudu Lake Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Point Calimere Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Point Calimere Wildlife Sanctuary “Block-A” and “Block-B”"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Pulicat Lake Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Sakkarakottai Tank Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Sathyamangalam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Srivilliputhur Grizzled Squirrel Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Therthangal Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Udayamarthandapuram Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Vaduvoor Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Vallanadu Black Buck Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Vedanthangal Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Vellode Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tamil Nadu",
+      "name": "Vettangudi Birds Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Amrabad (Nagarjunasagar-Srisailam) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Eturnagaram Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Kawal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Kinnersani Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Lanja Madugu Siwaram Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Manjeera Crocodile Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Pakhal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Pocharam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Telangana",
+      "name": "Pranahita Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tripura",
+      "name": "Gumti Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tripura",
+      "name": "Rowa Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tripura",
+      "name": "Sepahijala Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Tripura",
+      "name": "Trishna Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Bakhira Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Chandraprabha Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Chandra Sekhar Azad (Nawabganj) Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Dr. Bhimrao Ambedkar Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Hastinapur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Jai Prakash Narayan (Surhatal) Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Kachhua (Turtle) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Kaimur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Katerniaghat Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Kishanpur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Lakh Bahosi Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Mahavir Swami Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "National Chambal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Okhala Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Parvati Aranga Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Patna Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Pilibhit Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Ranipur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Saman Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Samaspur Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Sandi Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Shekha Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Sohagibarwa Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Sohelwa Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Sur Sarovar Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttar Pradesh",
+      "name": "Vijai Sagar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttarakhand",
+      "name": "Askot Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttarakhand",
+      "name": "Binsar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttarakhand",
+      "name": "Govind Pashu Vihar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttarakhand",
+      "name": "Kedarnath Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttarakhand",
+      "name": "Mussoorie Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttarakhand",
+      "name": "Nandhaur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Uttarakhand",
+      "name": "Sonanadi Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Ballavpur Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Bethuadahari Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Bibhuti Bhusan Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Buxa Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Chapramari Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Chintamani Kar Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Haliday Island Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Jorepokhri Salamander Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Lothian Island Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Mahananda Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Pakhi Bitan Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Raiganj Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Ramnabagan Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Sajnakhali Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "Senchal Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "West Bengal",
+      "name": "West Sunderban Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Arial Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Bamboo Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Barren Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Battimalve Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Belle Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Benette Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Bingham Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Blister Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Bluff Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Bondoville Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Brush Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Buchanan Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Channel Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Cinque Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Clyde Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Cone Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Coral Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Curlew (B.P.) Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Curlew Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Cuthbert Bay Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Defence Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Dot Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Dottrell Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Duncan Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "East Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Egg Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Entrance Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Flat Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Gander Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Goose Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Gurjan Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Hump Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Interview Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "James Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Jungle Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Kwangtung Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Kyd Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Landfall Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Latouche Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Leatherback Turtle Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Lohabarrack Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Mangrove Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Mask Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Mayo Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Megapode Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Montogomery Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Narcondum Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "North Brother Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "North Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "North Reef Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Oliver Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Orchid Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Ox Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Oyster Island-I Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Oyster Island-II Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Paget Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Parkinson Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Passage Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Peacock Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Petric Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Pitman Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Point Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Potanma Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Ranger Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Reef Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Roper Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Ross Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Rowe Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Sandy Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Sea Serpent Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Shark Island"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Shearme Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Sir Hugh Ross Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Sister Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Snake Island-I Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Snake Island-II Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "South Brother Island"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "South Reef"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "South Sentinel Island"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Spike Island-I"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Spike Island-II"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Stoat Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Surat Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Swamp Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Table (Delgarno) Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Table (Excelsior) Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Talabaicha Island"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Temple Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Tillongchang Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Tree Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Trilby Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Tuft Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Turtle Island"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "West Island"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "Wharf Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Andaman and Nicobar Islands",
+      "name": "White Cliff Island Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chandigarh",
+      "name": "City Bird Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Chandigarh",
+      "name": "Sukhna Lake Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "name": "Dadra & Nagar Haveli Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "name": "Fudam Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Delhi",
+      "name": "Asola Bhati (Indira Priyadarshini) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Bani Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Gulmarg Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Hirpora Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Jasrota Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Lachipora Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Limber Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Nandni Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Overa Aru Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Rajparian (Daksum) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Ramnagar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Surinsar Mansar Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Tata Kutti Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Thajwas (Baltal) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Jammu and Kashmir",
+      "name": "Tral Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Ladakh",
+      "name": "Changthang Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Ladakh",
+      "name": "Karakoram (Nubra Shyok) Wildlife Sanctuary"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Lakshadweep",
+      "name": "Dr. Salim Ali Bird Sanctuary (Pitti Bird Sanctuary)"
+    },
+    {
+      "type": "wildlife_sanctuary",
+      "state": "Puducherry",
+      "name": "Oussudu Wildlife Sanctuary"
+    }
+  ]
+}

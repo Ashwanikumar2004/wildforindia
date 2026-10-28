@@ -1,0 +1,103 @@
+{
+  "reviewed": "2026-10-28",
+  "records": [
+    {
+      "common_name": "Indian Rhinoceros", "scientific_name": "Rhinoceros unicornis",
+      "category": "Mammal", "status": "VU", "habitats": ["Grassland", "Wetland"],
+      "diet": "Grasses, leaves and aquatic plants",
+      "short_description": "A large grazing mammal with one horn and folded skin, also called the greater one-horned rhinoceros.",
+      "description": "Indian rhinoceroses occupy grasslands and wetlands in the Indian subcontinent. Their thick skin forms prominent folds. Protection of floodplain habitat and prevention of poaching are central to their conservation.",
+      "behaviour": "Usually solitary, although several animals may gather at wallows or feeding areas.",
+      "fun_fact": "Its horn is made of keratin, the same type of material found in human nails.",
+      "sources": ["https://www.worldwildlife.org/species/rhino/greater-one-horned-rhino/"]
+    },
+    {
+      "common_name": "Snow Leopard", "scientific_name": "Panthera uncia",
+      "category": "Mammal", "status": "VU", "habitats": ["Mountain"],
+      "diet": "Mountain ungulates and smaller animals",
+      "short_description": "A thick-furred cat adapted to the cold, rocky mountains of the Himalayas and Central Asia.",
+      "description": "Snow leopards live in rugged high-altitude landscapes. Their survival depends on wild prey, connected mountain habitat, and coexistence with communities that keep livestock.",
+      "behaviour": "A generally solitary predator that moves across steep mountain terrain.",
+      "fun_fact": "The long tail helps with balance and can be wrapped around the body for warmth.",
+      "sources": ["https://www.cms.int/species/uncia-uncia", "https://wwf.org.au/what-we-do/species/snow-leopard"]
+    },
+    {
+      "common_name": "Red Panda", "scientific_name": "Ailurus fulgens",
+      "category": "Mammal", "status": "EN", "habitats": ["Forest", "Mountain"],
+      "diet": "Mainly bamboo, with fruit and other foods",
+      "short_description": "A small, tree-climbing mammal of Himalayan forests, recognised by its reddish coat and ringed tail.",
+      "description": "Red pandas rely on cool forests with bamboo. They spend much of their time in trees and are threatened by the loss and fragmentation of forest habitat.",
+      "behaviour": "An agile climber that uses its long tail for balance.",
+      "fun_fact": "A modified wrist bone helps it grip bamboo.",
+      "sources": ["https://nationalzoo.si.edu/animals/red-panda"]
+    },
+    {
+      "common_name": "Ganges River Dolphin", "scientific_name": "Platanista gangetica",
+      "category": "Mammal", "status": "EN", "habitats": ["River"],
+      "diet": "Fish and other aquatic prey",
+      "short_description": "A freshwater dolphin that uses sound to navigate and find prey in river water.",
+      "description": "The Ganges river dolphin inhabits river systems of India, Nepal and Bangladesh. Dams, accidental entanglement in fishing gear, and pollution threaten the rivers on which it depends.",
+      "behaviour": "Uses echolocation to find food in water where visibility can be low.",
+      "fun_fact": "It is India's national aquatic animal.",
+      "sources": ["https://v1.wii.gov.in/campa_dolphin", "https://www.riverdolphins.org/river-dolphins-worldwide/ganges-river-dolphin/"]
+    },
+    {
+      "common_name": "Sloth Bear", "scientific_name": "Melursus ursinus",
+      "category": "Mammal", "status": "VU", "habitats": ["Forest", "Grassland"],
+      "diet": "Termites, ants and fruit",
+      "short_description": "A shaggy-coated bear with long claws adapted for digging into insect nests.",
+      "description": "Sloth bears inhabit forests and some grassland landscapes of the Indian subcontinent. They use their claws and sensitive sense of smell to locate food. Habitat loss and conflict with people are conservation concerns.",
+      "behaviour": "Digs into termite mounds and sucks insects through its specialised mouth.",
+      "fun_fact": "Young cubs often ride on their mother's back.",
+      "sources": ["https://nationalzoo.si.edu/animals/sloth-bear"]
+    },
+    {
+      "common_name": "Lion-tailed Macaque", "scientific_name": "Macaca silenus",
+      "category": "Mammal", "status": "EN", "habitats": ["Forest"],
+      "diet": "Fruit, insects and other forest foods",
+      "short_description": "A forest monkey with a silver-grey mane, found naturally in the Western Ghats.",
+      "description": "Lion-tailed macaques are endemic to the Western Ghats of southern India. They depend on forest canopy habitat, and fragmentation can isolate their populations.",
+      "behaviour": "Forages in the upper forest canopy for fruit and insects.",
+      "endemic_to_india": true,
+      "sources": ["https://aazp.tn.gov.in/conservation/", "https://nilgirisbiosphere.org/fauna/"]
+    },
+    {
+      "common_name": "Nilgiri Tahr", "scientific_name": "Nilgiritragus hylocrius",
+      "category": "Mammal", "status": "EN", "habitats": ["Grassland", "Mountain"],
+      "diet": "Grasses and other vegetation",
+      "short_description": "A sure-footed mountain ungulate endemic to the southern Western Ghats.",
+      "description": "Nilgiri tahr occupy open mountain grasslands and rocky slopes. Protecting these specialised habitats is important for the survival of this endangered species.",
+      "behaviour": "Moves and grazes on steep slopes in groups.",
+      "endemic_to_india": true,
+      "sources": ["https://aazp.tn.gov.in/conservation/", "https://nilgirisbiosphere.org/fauna/"]
+    }
+  ],
+  "enrichments": {
+    "Panthera tigris": {
+      "behaviour": "Generally solitary. Individuals maintain territories, while mothers remain with their cubs until the young can hunt independently.",
+      "reproduction": "Females raise cubs in sheltered locations. Cubs depend on their mother while learning to hunt.",
+      "sources": ["https://nationalzoo.si.edu/animals/tiger"]
+    },
+    "Elephas maximus": {
+      "behaviour": "Females and young usually live in family groups. Large connected landscapes allow elephants to move between food and water sources.",
+      "sources": ["https://www.wwfindia.org/about_wwf/priority_species/indian_elephant/"]
+    },
+    "Gavialis gangeticus": {
+      "behaviour": "Spends much of its time in rivers, coming onto exposed banks to bask and nest. Its narrow snout is adapted for catching fish.",
+      "reproduction": "Females lay eggs in nests dug into sandy riverbanks.",
+      "sources": ["https://nationalzoo.si.edu/animals/gharial"]
+    },
+    "Panthera pardus": {
+      "behaviour": "A solitary, adaptable predator that uses a variety of habitats. Leopards are strong climbers and may carry prey into trees.",
+      "sources": ["https://www.catsg.org/living-species-leopard"]
+    },
+    "Pavo cristatus": {
+      "behaviour": "Forages on the ground and uses trees for roosting. Males display their colourful train during courtship.",
+      "sources": ["https://digitalrepository.wii.gov.in/bitstreams/16e3f302-80b2-4c60-8fd1-da1510f71c51/download"]
+    },
+    "Buceros bicornis": {
+      "behaviour": "Feeds on fruit and small animals in forest habitat. Large old trees provide important nesting cavities.",
+      "sources": ["https://doi.org/10.2305/IUCN.UK.2020-3.RLTS.T22682453A184603863.en"]
+    }
+  }
+}

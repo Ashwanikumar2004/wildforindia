@@ -6,7 +6,7 @@
 
         <h2 class="mb-4">
 
-            Wildlife Found
+            Verified wildlife records
 
         </h2>
 
@@ -18,23 +18,13 @@
 
                 <div class="card h-100 shadow-sm border-0">
 
-                    {% if species.primary_image %}
-
-                    <img src="{{ species.primary_image.image.url }}" class="card-img-top"
-                        alt="{{ species.common_name }}">
-
-                    {% else %}
-
-                    <img src="{% static 'images/species/default_species.jpg' %}" class="card-img-top"
-                        alt="{{ species.common_name }}">
-
-                    {% endif %}
+                    {% include "includes/species_illustration.html" with species=species image_class="card-img-top" %}
 
                     <div class="card-body">
 
                         <h6>
 
-                            {{ species.common_name }}
+                            <a class="text-success" href="{% url 'species_detail' species.slug %}">{{ species.common_name }}</a>
 
                         </h6>
 
@@ -56,7 +46,7 @@
 
                 <p class="text-muted">
 
-                    No wildlife information available.
+                No verified species are linked to this protected area yet. This means the catalogue is missing a species list; it does not mean wildlife is absent from the area.
 
                 </p>
 

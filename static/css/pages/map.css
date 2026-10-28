@@ -1,0 +1,457 @@
+.wildlife-map-page {
+    min-height: calc(100vh - 150px);
+    color: #183d2d;
+    background:
+        radial-gradient(ellipse at 7% 10%, rgba(132, 184, 117, .13), transparent 35%),
+        linear-gradient(180deg, #f5f8f1 0%, #edf3e9 100%);
+}
+
+.map-heading {
+    max-width: 720px;
+}
+
+.map-eyebrow,
+.map-panel-kicker {
+    color: #4b875b;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.map-heading h1 {
+    margin: .4rem 0 .45rem;
+    color: #173b2b;
+    font-size: clamp(2.1rem, 4vw, 3.2rem);
+    font-weight: 800;
+}
+
+.map-heading p {
+    margin: 0;
+    color: #5b7064;
+    font-size: 1.05rem;
+}
+
+.map-demo-note {
+    margin-bottom: 1.1rem;
+    padding: .85rem 1.1rem;
+    border: 1px solid #d7e7cd;
+    border-radius: 14px;
+    color: #3b5944;
+    background: #f7fbf2;
+    font-size: .9rem;
+}
+
+.wildlife-map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(310px, .85fr);
+    gap: 1.1rem;
+    align-items: stretch;
+}
+
+.map-visual-card,
+.map-information-card {
+    overflow: hidden;
+    border: 1px solid rgba(47, 93, 66, .1);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 18px 50px rgba(30, 66, 44, .09);
+}
+
+.map-visual-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.map-visual-toolbar {
+    display: flex;
+    min-height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    gap: .8rem;
+    padding: .75rem 1.1rem;
+    border-bottom: 1px solid #edf1eb;
+    color: #52685a;
+    font-size: .86rem;
+    font-weight: 700;
+}
+
+.map-live-dot,
+.map-legend-marker {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: .48rem;
+    border-radius: 50%;
+    background: #e7a93b;
+    box-shadow: 0 0 0 4px rgba(231, 169, 59, .16);
+    vertical-align: 1px;
+}
+
+.map-visual-buttons {
+    display: flex;
+    gap: .4rem;
+}
+
+.map-control-button {
+    min-width: 36px;
+    height: 34px;
+    padding: 0 .6rem;
+    border: 1px solid #e2e9df;
+    border-radius: 9px;
+    color: #315541;
+    background: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.map-control-button:hover,
+.map-control-button:focus-visible {
+    border-color: #9fbea0;
+    background: #f4f8f1;
+}
+
+.map-reset-button {
+    padding: 0 .75rem;
+    font-size: .78rem;
+}
+
+.india-map-canvas {
+    position: relative;
+    min-height: 470px;
+    flex: 1;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 54% 46%, rgba(255, 255, 255, .95) 0%, rgba(242, 247, 237, .8) 48%, rgba(231, 240, 228, .98) 100%);
+}
+
+.india-map-canvas canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 470px;
+    outline: none;
+    touch-action: none;
+}
+
+.map-loading,
+.map-render-error {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: min(84%, 360px);
+    padding: 1rem 1.2rem;
+    transform: translate(-50%, -50%);
+    border: 1px solid #dce8d8;
+    border-radius: 14px;
+    color: #385a45;
+    background: rgba(255, 255, 255, .94);
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(35, 70, 48, .1);
+}
+
+.map-render-error {
+    color: #7f402e;
+}
+
+.map-gesture-hint {
+    margin: 0;
+    padding: .7rem 1rem .2rem;
+    color: #78897d;
+    font-size: .77rem;
+    text-align: center;
+}
+
+.map-gesture-hint span {
+    padding: 0 .3rem;
+    color: #c4a15c;
+}
+
+.map-legend {
+    padding: .65rem 1rem 1rem;
+    color: #52685a;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.map-legend-boundary {
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    margin: 0 .35rem 0 1rem;
+    border: 1px solid #73977a;
+    border-radius: 2px;
+    background: #dcebd6;
+    vertical-align: -1px;
+}
+
+.map-information-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-filters,
+.map-selected-location,
+.map-location-section {
+    padding: 1.15rem 1.2rem;
+}
+
+.map-state-label {
+    display: block;
+    margin-bottom: .4rem;
+    color: #48634f;
+    font-size: .78rem;
+    font-weight: 800;
+}
+
+.map-state-select {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .62rem .75rem;
+    border: 1px solid #dce7d8;
+    border-radius: 10px;
+    color: #315541;
+    background: #fbfdf9;
+    font-size: .84rem;
+}
+
+.map-state-select:focus-visible {
+    border-color: #4a895c;
+    outline: 3px solid rgba(74, 137, 92, .16);
+}
+
+.map-filters,
+.map-selected-location {
+    border-bottom: 1px solid #edf1eb;
+}
+
+.map-panel-heading h2,
+.map-selected-location h2 {
+    margin: .25rem 0 0;
+    color: #193d2c;
+    font-size: 1.08rem;
+    font-weight: 800;
+}
+
+.map-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .42rem;
+    margin-top: .85rem;
+}
+
+.map-filter-chip {
+    padding: .4rem .68rem;
+    border: 1px solid #e1e9de;
+    border-radius: 999px;
+    color: #506a58;
+    background: #fff;
+    font-size: .75rem;
+    font-weight: 700;
+    transition: .18s ease;
+}
+
+.map-filter-chip:hover,
+.map-filter-chip.is-active {
+    border-color: #3d8054;
+    color: #fff;
+    background: #3d8054;
+}
+
+.map-selected-location {
+    min-height: 184px;
+    background: linear-gradient(135deg, #fbfdf8, #f5f9f1);
+}
+
+.map-selected-state {
+    margin: .3rem 0 .5rem;
+    color: #738176;
+    font-size: .8rem;
+}
+
+.map-selected-summary {
+    margin: .45rem 0 .65rem;
+    color: #4f6556;
+    font-size: .86rem;
+    line-height: 1.55;
+}
+
+.map-selected-species {
+    display: grid;
+    gap: .5rem;
+}
+
+.map-species-card {
+    padding: .65rem .72rem;
+    border: 1px solid #e5eee0;
+    border-radius: 11px;
+    background: #fff;
+}
+
+.map-species-name {
+    display: inline-block;
+    margin: 0;
+    color: #315f40;
+    font-size: .82rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.map-species-name:hover {
+    color: #1f442e;
+    text-decoration: underline;
+}
+
+.map-species-scientific,
+.map-species-details,
+.map-species-summary {
+    margin: .15rem 0 0;
+    color: #728176;
+    font-size: .7rem;
+    line-height: 1.4;
+}
+
+.map-species-scientific {
+    font-style: italic;
+}
+
+.map-species-details {
+    color: #477154;
+    font-weight: 700;
+}
+
+.map-species-summary {
+    color: #576b5e;
+}
+
+.map-details-link {
+    display: inline-block;
+    margin-top: .75rem;
+    color: #34734a;
+    font-size: .8rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.map-location-section {
+    flex: 1;
+    min-height: 0;
+}
+
+.map-location-list {
+    max-height: 250px;
+    margin-top: .55rem;
+    overflow-y: auto;
+}
+
+.map-location-button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: .7rem;
+    padding: .67rem .35rem;
+    border: 0;
+    border-bottom: 1px solid #eff2ed;
+    color: #294b35;
+    background: transparent;
+    text-align: left;
+}
+
+.map-location-button:hover,
+.map-location-button.is-selected {
+    background: #f5f9f2;
+}
+
+.map-location-marker {
+    display: grid;
+    width: 31px;
+    height: 31px;
+    flex: 0 0 31px;
+    place-items: center;
+    border: 1px solid #e8d5ad;
+    border-radius: 10px;
+    color: #926c2b;
+    background: #fff9ec;
+    font-size: .65rem;
+    font-weight: 800;
+}
+
+.map-location-label {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+.map-location-label strong {
+    overflow: hidden;
+    color: #294b35;
+    font-size: .83rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.map-location-label small {
+    color: #7b897f;
+    font-size: .72rem;
+}
+
+.map-location-arrow {
+    color: #9aaa9d;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.map-empty-message,
+.map-data-note,
+.map-source-note {
+    color: #718075;
+    font-size: .75rem;
+    line-height: 1.5;
+}
+
+.map-data-note {
+    margin: 0;
+    padding: .8rem 1.2rem;
+    border-top: 1px solid #edf1eb;
+    background: #fbfcfa;
+}
+
+.map-source-note {
+    margin: .85rem 0 0;
+    text-align: right;
+}
+
+@media (max-width: 991.98px) {
+    .wildlife-map-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .map-information-card {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .wildlife-map-page .container {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .india-map-canvas,
+    .india-map-canvas canvas {
+        min-height: 390px;
+    }
+
+    .map-visual-toolbar {
+        padding-right: .75rem;
+        padding-left: .75rem;
+    }
+
+    .map-gesture-hint {
+        font-size: .68rem;
+    }
+}

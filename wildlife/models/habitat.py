@@ -21,7 +21,8 @@ class Habitat(models.Model):
     hero_image = models.ImageField(
         upload_to="habitats/",
         blank=True,
-        null=True
+        null=True,
+        max_length=500,
     )
 
     climate = models.CharField(
@@ -46,7 +47,8 @@ class Habitat(models.Model):
     icon = models.ImageField(
         upload_to="habitats/icons/",
         blank=True,
-        null=True
+        null=True,
+        max_length=500,
     )
 
     is_active = models.BooleanField(

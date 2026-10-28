@@ -1,0 +1,3 @@
+{% if media.path %}
+<p class="photo-credit">{% if media.artist %}Photo: {{ media.artist }} &middot; {% endif %}<a href="{{ media.source }}" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> &middot; {% if media.license_url %}<a href="{{ media.license_url }}" target="_blank" rel="noopener noreferrer">{{ media.license }}</a>{% else %}{{ media.license }}{% endif %}. Resized for display.</p>
+{% endif %}

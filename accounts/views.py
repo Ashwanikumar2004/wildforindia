@@ -4,6 +4,8 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.shortcuts import redirect, render
 from django.utils.http import url_has_allowed_host_and_scheme
 from django.views.decorators.http import require_POST
+from django.contrib import messages
+from .forms import ProfileForm
 
 
 def login_view(request):
@@ -49,3 +51,13 @@ def register_view(request):
 def logout_view(request):
     logout(request)
     return redirect("home")
+
+
+@login_required
+def profile_view(request):
+    form = ProfileForm(request.POST if request.method == "POST" else None, instance=request.user)
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        messages.success(request, "Your profile has been updated.")
+        return redirect("profile")
+    return render(request, "accounts/profile.html", {"form": form})

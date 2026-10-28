@@ -290,12 +290,8 @@ class Species(models.Model):
         If no image is marked as primary, returns the first image.
         """
 
-        primary = self.images.filter(is_primary=True).first()
-
-        if primary:
-            return primary
-
-        return self.images.first()
+        images = list(self.images.all())
+        return next((image for image in images if image.is_primary), images[0] if images else None)
 
     def __str__(self):
         return self.common_name

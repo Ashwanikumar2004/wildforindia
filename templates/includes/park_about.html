@@ -1,19 +1,19 @@
-<section class="py-5">
-
-    <div class="container">
-
-        <h2>
-
-            About the Park
-
-        </h2>
-
-        <p>
-
-            {{ park.description|linebreaks }}
-
-        </p>
-
+<section class="park-section protected-area-profile"><div class="container">
+    <div class="row g-4">
+        <div class="col-lg-8"><article class="content-panel h-100"><h2 class="h3">About {{ park.name }}</h2>
+            {% if profile.summary %}{{ profile.summary|linebreaks }}<p class="small mt-3">Introduction excerpt from <a href="{{ profile.article }}" target="_blank" rel="noopener noreferrer">Wikipedia and its contributors</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Retrieved {{ profile.retrieved }}. <a href="{{ profile.article }}?action=history" target="_blank" rel="noopener noreferrer">Article history</a>.</p>
+            {% else %}{{ park.description|linebreaks }}{% endif %}
+            {% if not park.hero_image and not park.images.all %}{% include "includes/photo_credit.html" with media=profile %}{% endif %}
+        </article></div>
+        <div class="col-lg-4"><aside class="content-panel h-100"><h2 class="h4">Plan your visit</h2>
+            <p>Entry permits, opening times, routes and seasonal closures can change. Confirm your plans with the local Forest Department.</p>
+            {% if park.nearest_city %}<p><strong>Nearest city:</strong> {{ park.nearest_city }}</p>{% endif %}
+            {% if park.nearest_airport %}<p><strong>Airport:</strong> {{ park.nearest_airport }}</p>{% endif %}
+            {% if park.nearest_railway_station %}<p><strong>Railway station:</strong> {{ park.nearest_railway_station }}</p>{% endif %}
+            {% if park.opening_time and park.closing_time %}<p><strong>Listed hours:</strong> {{ park.opening_time|time:"H:i" }}&ndash;{{ park.closing_time|time:"H:i" }}</p>{% endif %}
+            {% if park.official_website %}<a href="{{ park.official_website }}" class="btn btn-success mb-3" target="_blank" rel="noopener noreferrer">Official website &nearr;</a>{% endif %}
+            <a href="{{ map_search_url }}" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Find on Google Maps &nearr;</a>
+            <p class="small mt-3">Stay on designated routes, keep noise low, take litter home, and do not feed or approach wild animals.</p>
+        </aside></div>
     </div>
-
-</section>
+</div></section>
