@@ -14,9 +14,6 @@
         <div class="card border-0 shadow-sm">
             <div class="card-body p-4 p-md-5">
                 <p class="text-muted">Upload a clear photo (JPG or PNG, up to 4 MB). Your photo and results are saved to your account so you can view or delete them later.</p>
-                <div class="alert alert-info" role="status">
-                    Identification uses SpeciesNet, a wildlife model designed mainly for camera-trap photos. The first local request downloads model weights and may take several minutes; later requests reuse the downloaded model.
-                </div>
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% if form.non_field_errors %}
