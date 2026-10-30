@@ -3,12 +3,62 @@
 import os
 import tempfile
 import threading
+from concurrent.futures import TimeoutError as FutureTimeoutError
 from functools import lru_cache
 from pathlib import Path
+
+from django.conf import settings
 
 
 class SpeciesNetUnavailable(Exception):
     """Raised when the optional SpeciesNet package is not installed."""
+
+
+class RemoteInferenceUnavailable(Exception):
+    """The hosted model could not complete this identification."""
+
+
+def _remote_prediction(image_path):
+    from gradio_client import Client, handle_file
+
+    client = None
+    job = None
+    try:
+        # A separate client per request avoids sharing Gradio sessions between
+        # users. Never obtain credentials from a user's browser or uploaded file.
+        client = Client(
+            settings.HF_SPACE_ID,
+            token=settings.HF_TOKEN or None,
+            verbose=False,
+            analytics_enabled=False,
+            download_files=False,
+            httpx_kwargs={"timeout": 20.0},
+        )
+        job = client.submit(handle_file(str(image_path)), api_name="/identify")
+        response = job.result(timeout=settings.HF_INFERENCE_TIMEOUT)
+        if (
+            not isinstance(response, dict)
+            or not isinstance(response.get("predictions"), list)
+            or not response["predictions"]
+            or any(
+                not isinstance(row, dict) or row.get("errors") or row.get("failures")
+                for row in response["predictions"]
+            )
+        ):
+            raise RemoteInferenceUnavailable("Invalid prediction response")
+        return response
+    except FutureTimeoutError as exc:
+        if job is not None:
+            job.cancel()
+        raise RemoteInferenceUnavailable("Prediction timed out") from exc
+    except RemoteInferenceUnavailable:
+        raise
+    except Exception as exc:
+        # Keep provider messages, URLs and credentials out of the page.
+        raise RemoteInferenceUnavailable("Hosted prediction unavailable") from exc
+    finally:
+        if client is not None:
+            client.close()
 
 
 def _normalise_name(value):
@@ -83,7 +133,7 @@ def identify_image(image, species_records):
     geographic context because WildFIndia is an India-focused guide; its result is
     still a suggestion and must not be treated as a field-verified identification.
     """
-    model = _get_speciesnet()
+    model = None if settings.HF_SPACE_ID else _get_speciesnet()
     species_by_name = _species_index(species_records)
 
     # SpeciesNet accepts a filesystem path. A private temporary file avoids keeping
@@ -95,13 +145,16 @@ def identify_image(image, species_records):
 
         # Model objects are cached, but model inference itself is serialized to avoid
         # concurrent Django requests using the same CPU/GPU instance at once.
-        with _inference_lock:
-            response = model.predict(
-                instances_dict=instances,
-                run_mode="single_thread",
-                progress_bars=False,
-                max_classifications_per_detection=5,
-            )
+        if settings.HF_SPACE_ID:
+            response = _remote_prediction(image_path)
+        else:
+            with _inference_lock:
+                response = model.predict(
+                    instances_dict=instances,
+                    run_mode="single_thread",
+                    progress_bars=False,
+                    max_classifications_per_detection=5,
+                )
 
     predictions = response.get("predictions", []) if isinstance(response, dict) else []
     if not predictions:

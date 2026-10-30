@@ -152,7 +152,7 @@ installation only, install its optional dependencies:
 ```
 
 SpeciesNet downloads model files on first use and reuses them afterwards.
-Identification happens on the computer running Django. Scores are suggestions,
+With `HF_SPACE_ID` unset, identification happens on the computer running Django. Scores are suggestions,
 not guarantees; the person using the app confirms any WildDex addition.
 Model training photos are not required or included; see `datasets/README.md`.
 
@@ -174,9 +174,39 @@ Apply the database migrations and catalogue seed commands against the production
 database from a trusted environment. Keep secrets in hosting environment
 settings. Back up the production database and storage.
 
-**The current local SpeciesNet model is not configured to run on Vercel.**
-Its large dependencies are deliberately separate from the web requirements.
-Running the complete identifier online needs a compatible server with enough
-memory for the existing model, or a separately hosted inference service. That
-connection has not been changed as part of the catalogue and journal work.
-Do not present the Vercel web deployment alone as a working hosted identifier.
+### Online AI with Hugging Face
+
+The local model does not run inside Vercel. The web requirements include only
+the lightweight Gradio client. Set these Vercel Production variables:
+
+- `HF_SPACE_ID=Ashwanikumar21/wildforindia-ai-test`
+- `HF_TOKEN` (optional for the public test Space): a Hugging Face user access
+  token with read access if authenticated requests are needed. Keep it
+  server-side and never commit it. The public endpoint was tested without one.
+- `HF_INFERENCE_TIMEOUT=90` (optional; seconds waiting for a queued prediction,
+  capped at 180). Provider connection/setup time is additional. The hosting
+  function's duration must accommodate the entire request.
+
+The Gradio Space must expose `/identify`, accept one image file, and return the
+SpeciesNet JSON object with `predictions` and detection `raw_classifications`.
+The test Space built for this project provides that interface. Before deploying,
+test a real photo through its App tab. Redeploy Vercel after saving variables.
+No database migrations or catalogue reseeding are needed for this integration.
+
+Online requests send a re-encoded JPEG without original EXIF metadata to the
+Space. Hugging Face/Gradio may cache uploaded files independently of the private
+photo saved in Blob; deleting account history does not guarantee deletion of
+provider caches. Do not upload sensitive photos to the public test service.
+The page discloses the external processing before upload.
+
+Free ZeroGPU is quota-limited, queued and may be unavailable or asleep. Website
+traffic using one token shares that account's available quota. This is a demo
+integration, not unlimited always-on inference. A timeout, quota error or invalid
+response shows a retry message and does not create identification history or
+WildDex entries. Successful responses use the same catalogue matching, confidence
+thresholds, private history and confirmation workflow as local predictions.
+
+After deployment, test an upload, inspect its history, confirm an eligible
+WildDex suggestion, and delete the history photo. If the Space changes its API,
+re-test before updating the configured Space. Unset `HF_SPACE_ID` locally to
+continue using the existing local SpeciesNet installation.

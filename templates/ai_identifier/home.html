@@ -14,6 +14,7 @@
         <div class="card border-0 shadow-sm">
             <div class="card-body p-4 p-md-5">
                 <p class="text-muted">Upload a clear photo (JPG or PNG, up to 4 MB). Your photo and results are saved to your account so you can view or delete them later.</p>
+                {% if uses_remote_identifier %}<p class="text-muted small">Online identification sends your photo to our Hugging Face AI service for processing. It may take a little longer when the service is busy.</p>{% endif %}
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% if form.non_field_errors %}

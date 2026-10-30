@@ -3,15 +3,16 @@ from unittest.mock import Mock, patch
 
 from django.contrib.auth import get_user_model
 from django.core.files.uploadedfile import SimpleUploadedFile
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.urls import reverse
 from PIL import Image
 
 from ai_identifier.models import Identification, IdentificationResult
-from ai_identifier.predictor import identify_image
+from ai_identifier.predictor import RemoteInferenceUnavailable, identify_image
 from wildlife.models import Category, ConservationStatus, Species
 
 
+@override_settings(HF_SPACE_ID="")
 class IdentifierPageTests(TestCase):
     def setUp(self):
         user_model = get_user_model()
@@ -57,6 +58,16 @@ class IdentifierPageTests(TestCase):
             image_buffer.getvalue(),
             content_type="image/png",
         )
+
+    @override_settings(HF_SPACE_ID="Ashwanikumar21/wildforindia-ai-test")
+    @patch("ai_identifier.views.identify_image")
+    def test_remote_failure_has_clear_message_and_does_not_save_history(self, predict):
+        predict.side_effect = RemoteInferenceUnavailable("secret provider details")
+        response = self.client.post(reverse("ai_identifier"), {"image": self.make_png_upload()})
+        self.assertContains(response, "online identifier is temporarily unavailable")
+        self.assertContains(response, "Hugging Face")
+        self.assertNotContains(response, "secret provider details")
+        self.assertEqual(Identification.objects.count(), 0)
 
     @patch("ai_identifier.views.identify_image")
     def test_valid_photo_shows_matched_species_details(self, identify_image):

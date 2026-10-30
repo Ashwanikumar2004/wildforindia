@@ -23,6 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # through the hosting provider's environment variable settings.
 load_dotenv(BASE_DIR / ".env")
 
+# Leave empty to keep using local SpeciesNet. Only the small API client is
+# installed on Vercel; the model itself runs in the configured Space.
+HF_SPACE_ID = os.environ.get("HF_SPACE_ID", "").strip()
+HF_TOKEN = os.environ.get("HF_TOKEN", "").strip()
+HF_INFERENCE_TIMEOUT = min(max(int(os.environ.get("HF_INFERENCE_TIMEOUT", "90")), 1), 180)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/

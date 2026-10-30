@@ -10,12 +10,13 @@ from django.http import FileResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.http import require_POST
 from PIL import Image
+from django.conf import settings
 
 from wildlife.models import Species
 
 from .forms import WildlifeImageForm
 from .models import Identification, IdentificationResult
-from .predictor import SpeciesNetUnavailable, identify_image
+from .predictor import RemoteInferenceUnavailable, SpeciesNetUnavailable, identify_image
 
 
 logger = logging.getLogger(__name__)
@@ -86,6 +87,11 @@ def identifier_home(request):
                     uploaded_name = uploaded.name
                     for result in results:
                         result["identification_id"] = identification.pk
+            except RemoteInferenceUnavailable:
+                form.add_error(
+                    None,
+                    "The online identifier is temporarily unavailable. Its free GPU queue or daily quota may be full. Please try again later. Your photo was not saved to your account.",
+                )
             except SpeciesNetUnavailable:
                 form.add_error(
                     None,
@@ -121,6 +127,7 @@ def identifier_home(request):
             "prediction": prediction,
             "other_predictions": results[1:],
             "uploaded_name": uploaded_name,
+            "uses_remote_identifier": bool(settings.HF_SPACE_ID),
         },
     )
 
